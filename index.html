@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML CSS JS</title>
+    <style rel="preload" >
+        @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Luxurious+Script&display=swap');
+    </style>
+    <style>
+        * {
+            
+        }
+
+        body {
+            background-image: url("water/1.jpg");
+        }
+        
+        h1 {
+            font-family: 'Ephesis', cursive;
+            font-family: 'Luxurious Script', cursive;
+            text-align: center;
+            font-size: 5em;
+            font-weight: 400;
+            padding: 0px;
+            margin: -10px;
+            font-style: italic;
+        }
+
+        .container {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .container-lower {
+            padding-top: 10em;
+        }
+        
+        .w-100 { width: 100%; }
+        
+        .fancy-border {
+            border: 10px solid;
+            border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
+        }
+
+        .date-text {
+            text-align: center;
+            font-size: 2em;
+
+        }
+
+        .text-center {text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="fancy-border container" style="width:900px; margin-top:5em;">
+        <div>
+            <img class="w-100" src="9.png">
+        </div>
+    </div>
+
+    <div class="fancy-border container" style="width:700px; margin-top:5em;">
+
+        <div>
+            <h1>
+                Glen &
+                Bea Cecilie
+            </h1>
+        </div>
+
+        <div class="container-lower">
+            <div class="text-center">
+                INVITE YOU TO JOIN THEM ON THIER WEDDING DAY
+            </div>
+
+            <div class="text-center">
+                SUNDAY 24TH SEPTEMBER 2023
+            </div>
+
+            <h3>MELVILLE CASTLE, EDINBURGH, SCOTLAND</h3>
+        </div>
+    </div>
+
+    <a
+        target="_blank"
+        href="https://www.google.co.uk/maps/dir/Edinburgh+Airport+(EDI),+Edinburgh+EH12+9DN/Melville+Castle+Hotel,+Gilmerton+Road,+Edinburgh/@55.9254727,-3.2109755,11z/data=!4m18!4m17!1m5!1m1!1s0x4887c50e93e3017d:0x19530a2592b1d59b!2m2!1d-3.3614532!2d55.950785!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!2m3!6e0!7e2!8j1695405600!3e0">
+        Directions From Airport
+    </a>
+    
+    <textarea id="myText" style="width:700px; height:100px">
+I can confirm that the following guests will/will not be attending:
+    * Person 1
+    * Person 2
+    * ...
+    </textarea>
+    <button onclick="sendMail(); return false">Send</button>
+
+    <script>
+        function sendMail() {
+            const link = "mailto:morrison.bruce.glen@gmail.com"
+                        + "?cc=bceciliekarlsen@gmail.com"
+                        + "&subject=" + encodeURIComponent("This is my subject")
+                        + "&body=" + encodeURIComponent(document.getElementById('myText').value);
+
+            window.location.href = link;
+        }
+    </script>
+</body>
+</html>
