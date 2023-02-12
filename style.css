@@ -4,16 +4,13 @@
 
 
 body {
-    font-family: 'Neucha', cursive;
+    font-family: 'Roboto Condense', cursive;
 }
 
 .fancy-font {
     font-family: 'Great Vibes', cursive;
 }
 
-.alt-font {
-    font-family: 'Special Elite', cursive;
-}
 
 .img-cover {
     object-fit: cover;
