@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Luxurious+Script&family=Roboto+Condensed&display=swap');
+
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+.border-main {
+    border-style: double;
+    border-color: black;
+    border: 7px double black;
+}
