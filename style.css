@@ -1,24 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Luxurious+Script&family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Roboto+Condensed&family=Special+Elite&display=swap');
 
-body { font-family: 'Roboto Condensed', sans-serif; }
-.fancy-font { font-family: 'Great Vibes', cursive; }
-.img-cover { object-fit: cover; }
 
-.border-main {
-    border-style: double;
-    border-color: rgb(95, 95, 95);
-    border: 1px solid;
+body {
+    font-family: 'Neucha', cursive;
 }
 
-.container > button {
-    width: 90px;
-    border:none;
+.fancy-font {
+    font-family: 'Great Vibes', cursive;
 }
 
-.active-section {
-    font-weight: bolder;
-    border-bottom: 1px solid grey !important
+.alt-font {
+    font-family: 'Special Elite', cursive;
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+.btn {
+    width: 220px;
+    font-size: 2em;
+    color: black;
+    border:1px solid #00000047;
 }
 
 .card-header {
