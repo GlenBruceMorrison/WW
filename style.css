@@ -7,8 +7,8 @@ body { font-family: 'Roboto Condensed', sans-serif; }
 
 .border-main {
     border-style: double;
-    border-color: black;
-    border: 7px double black;
+    border-color: rgb(95, 95, 95);
+    border: 1px solid;
 }
 
 .container > button {
@@ -19,4 +19,8 @@ body { font-family: 'Roboto Condensed', sans-serif; }
 .active-section {
     font-weight: bolder;
     border-bottom: 1px solid grey !important
+}
+
+.card-header {
+    font-size: 2em;
 }
