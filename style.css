@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Luxurious+Script&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-
-body {
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.img-cover {
-    object-fit: cover;
-}
+body { font-family: 'Roboto Condensed', sans-serif; }
+.fancy-font { font-family: 'Great Vibes', cursive; }
+.img-cover { object-fit: cover; }
 
 .border-main {
     border-style: double;
     border-color: black;
     border: 7px double black;
+}
+
+.container > button {
+    width: 90px;
+    border:none;
+}
+
+.active-section {
+    font-weight: bolder;
+    border-bottom: 1px solid grey !important
 }
