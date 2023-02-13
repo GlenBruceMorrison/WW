@@ -8,8 +8,6 @@ body {
     color: #F0877A;
 }
 
-
-
 .fancy-font {
     font-family: 'Great Vibes', cursive;
 }
@@ -39,9 +37,12 @@ body {
 }
 
 .shadow {
-    
     -webkit-box-shadow: 14px 10px 41px -7px rgba(148,148,148,0.64);
     -moz-box-shadow: 14px 10px 41px -7px rgba(148,148,148,0.64);
     box-shadow: 14px 10px 41px -7px rgba(148,148,148,0.64);
     height: 90vh;
+}
+
+.header-button {
+    margin-top: 5em;
 }
