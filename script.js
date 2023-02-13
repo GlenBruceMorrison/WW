@@ -23,20 +23,7 @@ const setSection = x => {
     sections[activeSection].style.display = null;
     buttons[activeSection].classList.add('active-section');
 
-    
+    return false;
 }
 
 let activeSection = 0;
-
-var decoratorURI = [
-    'https://th.bing.com/th/id/OIG.75WqJIdBCn1SMIOhr8oN?pid=ImgGn',
-    'https://th.bing.com/th/id/OIG.inA6OGemfnVesRebuTdr?pid=ImgGn',
-    'https://th.bing.com/th/id/OIG.9.1P1fKIwJBlNLqOCZZC?pid=ImgGn',
-    'https://static.vecteezy.com/system/resources/previews/013/855/181/large_2x/bouquet-of-pink-watercolor-flowers-free-png.png',
-    'https://th.bing.com/th/id/OIG.EsVYQ8k6VemAULn4h2mp?pid=ImgGn',
-    'https://th.bing.com/th/id/OIG.9.1P1fKIwJBlNLqOCZZC?pid=ImgGn'
-];
-
-Array.prototype.forEach.call(document.getElementsByClassName('decorator'), function(el) {
-    el.src = decoratorURI[5];
-});
