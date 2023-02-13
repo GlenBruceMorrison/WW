@@ -11,39 +11,22 @@
 </head>
 
 <body>
-    <div style="height: 200px;
-                position: fixed;
-                width: 100%;
-                background-color: white;
-                z-index:100">
+    <div id="header" style="height: 200px; position: fixed; width: 100%; background-color: white; z-index:100">
         <div class="col-12 text-center">
             <img src="1.png" style="height:200px" />
         </div>
-        <div class="col-12">
-            <div class="row">
-                <div class="col-12 header" style="
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 5em;
-                    top: 100px;
-                    position: fixed;">
-                    <a id="button-main" onclick='return setSection(0)''>Info</a>
-                    <a id="button-location" onclick=' return setSection(1)'>Location</a>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <a>Itenerary</a>
-                    <a>Q&A</a>
-                </div>
-            </div>
+        <div class="header" style="display: flex; justify-content: space-evenly; align-items:center; top: 100px; max-width: 960px; margin: 0 auto; margin-top: -7em;">
+            <a id="button-main" onclick='return setSection(0)''>Info</a>
+            <a id="button-location" onclick=' return setSection(1)'>Location</a>
+            <div class="seperator"></div>
+            <a>Itenerary</a>
+            <a>Q&A</a>
         </div>
     </div>
     <div style="overflow-y: auto">
         <div class="container" style="padding-top: 230px;">
             <div id="section-main" class="col-12 text-center" style="padding-top: 8em">
-                <div class="display-1 fancy-font" style="margin-top: 1em; color:black">Glen & Bea Cecilie</div>
+                <div class="display-1 fancy-font" style="margin-top: 1em; color:black">- Glen & Bea Cecilie -</div>
 
                 <div class="h4 pt-5 " style="margin-top: 3em;">Invite you to their wedding day</div>
                 <div class="text-center h4">Sunday September 24th</div>
@@ -70,6 +53,7 @@
                     <div class="row pt-2">
                         <div class="col-12">
                             <p><a target="_blank" href="https://www.google.com/maps/dir/Edinburgh+Airport+(EDI),+Edinburgh/Melville+Castle+Hotel,+Gilmerton+Rd,+Edinburgh+EH18+1AP/@55.9204025,-3.366574,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x4887c50e93e3017d:0x19530a2592b1d59b!2m2!1d-3.3614532!2d55.950785!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0">From Edinburgh Airport (20 mins)</a></p>
+                            <p><a target="_blank" href="https://www.google.com/maps/dir/55.9484977,-3.186609/55.8915294,-3.103857/@55.8932805,-3.1033653,16z/data=!4m6!4m5!2m3!6e0!7e2!8j1677414300!3e0">From Edinburgh Central (30 mins)</a></p>
                             <p><a target="_blank" href="https://www.google.com/maps/dir/Glasgow+Airport+(GLA),+Paisley/Melville+Castle+Hotel,+Gilmerton+Rd,+Edinburgh+EH18+1AP/@55.9339185,-4.8903372,8z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x48884eb90111e0dd:0x24a888b519aa330b!2m2!1d-4.4350529!2d55.8690744!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0">From Glasgow Airport (1 hour)</a></p>
                         </div>
                     </div>

@@ -30,10 +30,43 @@ body {
 }
 
 .header a {
-    color: white;
+    all: unset;
+    color: black;
     cursor: pointer;
 }
 
 .header a:hover {
     text-decoration: underline !important;
+}
+
+.active-section {
+    text-decoration: underline !important;
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        
+    }
+
+    #header {
+        height:138px !important;
+        margin-top: 0px !important;
+        box-shadow: -1px -2px 9px 3px #00000026;
+    }
+
+    .header {
+        margin-top: 0px !important;
+    }
+
+    #header img {
+        height: 100px !important;
+    }
+
+    #section-main{
+        margin-top: -9em !important;
+    }
+
+    .seperator {
+        display: none;
+    }
 }

@@ -16,7 +16,6 @@ const setSection = x => {
     });
 
     buttons.forEach(x => {
-        console.log(x)
         x.classList.remove('active-section');
     });
 
