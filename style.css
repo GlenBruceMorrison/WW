@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Luxurious+Script&family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Roboto+Condensed&family=Special+Elite&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Petit+Formal+Script&family=Roboto+Condensed&family=Special+Elite&display=swap');
 
 body {
-    font-family: 'Roboto Condense', cursive;
+    font-family: 'Petit Formal Script', cursive;
+    background-color: #DFEBE5;
+    color: #F0877A;
 }
+
+
 
 .fancy-font {
     font-family: 'Great Vibes', cursive;
@@ -25,4 +28,20 @@ body {
 
 .card-header {
     font-size: 2em;
+}
+
+.section {
+    height: 100vh;
+    width:100%;
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.shadow {
+    
+    -webkit-box-shadow: 14px 10px 41px -7px rgba(148,148,148,0.64);
+    -moz-box-shadow: 14px 10px 41px -7px rgba(148,148,148,0.64);
+    box-shadow: 14px 10px 41px -7px rgba(148,148,148,0.64);
+    height: 90vh;
 }
