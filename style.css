@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Luxurious+Script&family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Petit+Formal+Script&family=Roboto+Condensed&family=Special+Elite&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Petit+Formal+Script&family=Roboto+Condensed&family=Roboto:wght@300&family=Special+Elite&display=swap');
 body {
-    font-family: 'Petit Formal Script', cursive;
+    font-family: 'Roboto', cursive;
     background-color: white;
 }
 
@@ -43,11 +42,13 @@ body {
     text-decoration: underline !important;
 }
 
-@media only screen and (max-width: 960px) {
-    body {
-        
+@media (min-width: 1200px) {
+    .display-1 {
+        font-size: 8rem;
     }
+}
 
+@media only screen and (max-width: 960px) {
     #header {
         height:138px !important;
         margin-top: 0px !important;
@@ -68,5 +69,22 @@ body {
 
     .seperator {
         display: none;
+    }
+}
+
+.card {    background-color: #ececec; margin-bottom:1em}
+
+/* HERO IMAGE */
+
+
+@media (min-width: 1440px) {
+    .hero-image {
+        height: 640px !important;
+    }
+}
+
+@media (max-width: 960px) {
+    .under-header {
+        padding-top: 150px !important;
     }
 }
