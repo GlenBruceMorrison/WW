@@ -5,103 +5,87 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Glen & Bea Wedding</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-
-    <div id="header" style="height: 200px; position: fixed; width: 100%; background-color: white; z-index:100;">
-        <div class="col-12 text-center">
-            <img src="1.png" style="height:200px" />
-        </div>
-        <div class="header" style="display: flex; justify-content: space-evenly; align-items:center; top: 100px; max-width: 960px; margin: 0 auto; margin-top: -7em;">
-            <a id="button-main" onclick='return setSection(0)''>Info</a>
-            <a id="button-location" onclick=' return setSection(1)'>Location</a>
-            <div class="seperator"></div>
-            <a>Itenerary</a>
-            <a>Q&A</a>
-        </div>
+    <div class="hover-scroller">
+        <div id="scroll-main">Main</div>
+        <div id="scroll-location">Location</div>
+        <div id="scroll-directions">Directions</div>
+        <div id="scroll-hotels">Hotels</div>
     </div>
-    <div style="overflow-y: auto">
-        <div class="under-header" style="padding-top: 230px;">
-            <div id="section-main" class="col-12 text-center" style="padding-top: 8em">
-                <div class="display-1 fancy-font" style="margin-top: 1em; color:black">- Glen & Bea Cecilie -</div>
 
-                <div class="h4 pt-5 " style="margin-top: 3em;">Invite you to their wedding day</div>
-                <div class="text-center h4">Sunday September 24th</div>
-                <div class="text-center h4">Melville Castle, Edinburgh, Scotland</div>
+    <form method="GET" action="mailto:morrison.bruce.glen@gmail.com">
+        <button class="rsvp">
+            <div>Click To</div>
+            <div>RSVP</div>
+        </button>
+    </form>
+
+    <section id="main" class="hero" style="height: 100vh">
+        <div class="wrapper">
+            <div class="wrapper vertical">
+                <img src="1.png" class="image-large"/>
+                <div class="wrapper vertical">
+                    <h1 class="header-one fancy-font">Glen & Bea Cecilie</h1>
+                </div>
+                <p style="padding:1em">Invite you to their wedding day</p>
+                <div class="date-display">
+                    <div>Sunday</div>
+                    <div style="font-size: 3em;">24</div>
+                    <div>September</div>
+                </div>
+                <div style="width: 100px;height:100px" id="scroll-next" >
+                    <object style="pointer-events: none"data="down.svg" width="100" height="100"> </object>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <!-- SECTION TWO -->
-            <div id="section-location" class="col-12 text-center" style="display: none">
-                
-                <img class="hero-image" src="front-wide.jpg" style="width:100%;object-fit: cover"/>
-                <div class="container" style="padding-top: -5em">
-
-                    <div class="row pt-5">
-                        <div class="h1">Location</div>
-                        <hr/>
-
-                        <div class="pt-5">Gilmerton Rd, Edinburgh EH18 1AP, Scotland</div>
-                        <div style="width: 100%">
-                            <iframe class="pt-5" width="100%" height="410"
-                                frameborder="0" scrolling="no" margin height="0" marginwidth="0"
-                                src="https://maps.google.com/maps?width=100%25&amp;height=510&amp;hl=en&amp;q=Melville%20Castle%20Hotel+(Melville%20Castle)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">area maps</a>
-                            </iframe>
+    <section id="location" class="hero">
+        <h1 class="header-one text-center" style="padding-bottom: 1em">Location</h1>
+        <div class="wrapper">
+            <div style="display:flex; flex-direction: row; height:14em">
+                <div class="h-100" style="flex: 1 0 50%;">
+                    <div class="vertical h-100" style="justify-content: space-around;">
+                        <div>
+                            Our wedding will take place at Melville Castle in the Scottish Edinburgh
                         </div>
-
-                        <div class="h1" style="padding-top: 5em">Directions</div>
-                        <hr/>
-
-                        <div class="row pt-2">
-                            <div class="col-12">
-                                <div class="card p-4">
-                                    <p><a target="_blank" href="https://www.google.com/maps/dir/Edinburgh+Airport+(EDI),+Edinburgh/Melville+Castle+Hotel,+Gilmerton+Rd,+Edinburgh+EH18+1AP/@55.9204025,-3.366574,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x4887c50e93e3017d:0x19530a2592b1d59b!2m2!1d-3.3614532!2d55.950785!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0">From Edinburgh Airport (20 mins)</a></p>
-                                </div>
-                                
-                                <div class="card p-4">
-                                    <p><a target="_blank" href="https://www.google.com/maps/dir/55.9484977,-3.186609/55.8915294,-3.103857/@55.8932805,-3.1033653,16z/data=!4m6!4m5!2m3!6e0!7e2!8j1677414300!3e0">From Edinburgh Central (30 mins)</a></p>
-                                </div>
-                                
-                                <div class="card p-4">
-                                    <p><a target="_blank" href="https://www.google.com/maps/dir/Glasgow+Airport+(GLA),+Paisley/Melville+Castle+Hotel,+Gilmerton+Rd,+Edinburgh+EH18+1AP/@55.9339185,-4.8903372,8z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x48884eb90111e0dd:0x24a888b519aa330b!2m2!1d-4.4350529!2d55.8690744!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0">From Glasgow Airport (1 hour)</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="h1" style="padding-top: 5em">Hotels</div>
-                        <hr/>
-
-                        <div class="row pt-2">
-                            <div class="col-12">
-                                <div class="card p-4">
-                                    <a target="_blank" href="https://ikl.dbm.guestline.net/availability?hotel=IKLEDIN&_ga=2.138657211.94118196.1676224256-1349922655.1675612078">The Melville Inn</a>
-                                    <p>Price (Approx): 80-100 GBP ~ 985 NOK ~ 1011 SEK</p>
-                                    <a target="_blank" href="https://www.google.com/maps/dir/Melville+Castle+Hotel,+Gilmerton+Road,+Edinburgh/Innkeeper's+Collection+Edinburgh+South,+The+Melville+Inn,+Melville+Nurseries,+Lasswade+EH18+1AR/@55.893589,-3.104592,15.75z/data=!4m14!4m13!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!1m5!1m1!1s0x4887becd6d073c1b:0x107530f62dd5f8a7!2m2!1d-3.0967991!2d55.8947263!3e2">Directions (20 min walk from castle, 3 minute drive)</a>
-                                </div>
-                                <div class="card p-4">
-                                    <a target="_blank" href="https://www.premierinn.com/gb/en/hotels/scotland/lothian/edinburgh/edinburgh-a7-dalkeith.html">Premier Inn</a>
-                                    <p>Price (Approx): 80-100 GBP ~ 985 NOK ~ 1011 SEK</p>
-                                    <a target="_blank" href="https://www.google.com/maps/dir/Melville+Castle+Hotel,+Gilmerton+Road,+Edinburgh/Premier+Inn+Edinburgh+A7+(Dalkeith)+hotel,+Melville+Dykes+Rd,+Edinburgh+EH18+1AN/@55.8885501,-3.100532,15.5z/data=!4m15!4m14!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!1m5!1m1!1s0x4887becfc608f315:0x9a557c162d885b94!2m2!1d-3.0956315!2d55.8877182!3e2!5i1">Directions (30 min walk from castle, 4 minute drive)</a>
-                                </div>
-                                <div class="card p-4">
-                                    <a target="_blank" href="https://www.dalhousiecastle.co.uk/">Dalhousie Castle (Another Castle Hotel)</a>
-                                    <p>Price (Approx): 160-250 GBP ~ 1840-3066 NOK ~ 1892-3154 SEK</p>
-                                    <a target="_blank" href="https://www.google.com/maps/dir/Melville+Castle+Hotel,+Gilmerton+Road,+Edinburgh/Dalhousie+Castle+Hotel+And+Aqueous+Spa,+Bonnyrigg+EH19+3JB/@55.8781226,-3.109183,14z/data=!4m14!4m13!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!1m5!1m1!1s0x4887bef3047c3641:0x485b477d2aa1be3b!2m2!1d-3.0824715!2d55.8607713!3e0">Directions (10 minute drive)</a>
-                                </div>
-                                <div class="card p-4">
-                                    <a target="_blank" href="https://www.google.com/travel/hotels?utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CAAQ5JsGahcKEwiYo_atyJD9AhUAAAAAHQAAAAAQBA&ts=CAESABogCgIaABIaEhQKBwjnDxAJGBcSBwjnDxAJGBkYAjICCAEqCQoFOgNHQlAaAA&rp=OAE&ap=MAFakQIKBQivARAAIgNHQlAqFgoHCOcPEAIYEBIHCOcPEAIYERgBKACwAQBYAWgBmgEMEgpNaWRsb3RoaWFuqgEeCgIIIRICCA8SAggVEgIIDRICCGcSAghbEgIILxgBqgELCgIIEhIDCJsBGAGqARYKAggcEgIIURICCHMSAgg2EgIIKRgBqgEeCgIIERICCCoSAghAEgIIOBICCFcSAggCEgIIfxgBqgEHCgMIxgIYAKoBIAoCCC4SAgg7EgIIVhIDCJkBEgMIgQESAghLEgIIDBgBqgEHCgMIpwEYAKoBCwoDCOECEgIIYxgBqgEGCgIIRhgAqgEPCgIIUBICCE8SAwiIAhgBqgEGCgIIORgAkgECIAE">Other Nearby Hotels</a>
-                                </div>
-                            </div>
-                        </div>
+                        <a class="button" target="_blank" href="https://www.google.com/maps?ll=55.891109,-3.104078&z=13&t=h&hl=en-US&gl=US&mapclient=embed&cid=15597627361630517583">
+                            Maps
+                        </a>
                     </div>
-            </div>
+                </div>
+                <div style="flex: 1 0 50%;">
+                    <img src="front-wide.jpg" style="width: 100%"/>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section id="directions" class="hero">
+        <h1 class="header-one text-center" style="padding-bottom: 1em">Directions</h1>
+        <div class="wrapper">
+            <div style="display:flex; flex-direction: row; height: 500px">
+                <div style="flex: 1 0 50%;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2237.360185403564!2d-3.10627224803658!3d55.8911123886877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887becc84d0aec9%3A0xd875e77214e6794f!2sMelville%20Castle%20Hotel!5e0!3m2!1sen!2suk!4v1676663332157!5m2!1sen!2suk" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div style="flex: 1 0 50%;" class="h-100 vertical direction-links">
+                    <div><a href="https://www.google.com/maps/dir/Edinburgh+Airport,+Edinburgh+EH12+9DN/Melville+Castle+Hotel+Gilmerton+Rd+Edinburgh+EH18+1AP/@55.9204025,-3.366574,11z/data=!4m14!4m13!1m5!1m1!1s0x4887c50e93e3017d:0x19530a2592b1d59b!2m2!1d-3.3614532!2d55.950785!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0" target="_blank">Direction from Edinburgh Airport</a></div>
+                    <div><a href="https://www.google.com/maps/dir/Glasgow+Airport+(GLA),+Paisley/Melville+Castle+Hotel+Gilmerton+Rd+Edinburgh+EH18+1AP/@55.8810938,-4.3298932,9z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x48884eb90111e0dd:0x24a888b519aa330b!2m2!1d-4.4350529!2d55.8690744!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0" target="_blank">Direction from Glasgow Airport</a></div>
+                    <div><a href="https://www.google.com/maps/dir/Edinburgh/Melville+Castle+Hotel+Gilmerton+Rd+Edinburgh+EH18+1AP/@55.9490796,-3.1954492,15.5z/data=!4m14!4m13!1m5!1m1!1s0x4887b800a5982623:0x64f2147b7ce71727!2m2!1d-3.188267!2d55.953252!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0" target="_blank">Direction from Edinburgh City Center</a></div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hotels" class="hero">
+        <h1 class="header-one text-center" style="padding-bottom: 1em">Hotels</h1>
+        <div class="wrapper">
+            
+        </div>
+    </section>
 
     <script type="text/javascript" src="script.js"></script>
 </body>

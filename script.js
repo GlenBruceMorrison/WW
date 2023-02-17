@@ -1,28 +1,15 @@
-const sections = [
-    document.getElementById('section-main'),
-    document.getElementById('section-location')
-]
 
-const buttons = [
-    document.getElementById('button-main'),
-    document.getElementById('button-location')
-];
-
-const setSection = x => {
-    activeSection = x;
-
-    sections.forEach(x => {
-        x.style.setProperty('display', 'none');
-    });
-
-    buttons.forEach(x => {
-        x.classList.remove('active-section');
-    });
-
-    sections[activeSection].style.display = null;
-    buttons[activeSection].classList.add('active-section');
-
-    return false;
+function createScrollLink(linkName, targetName) {
+    const link = document.getElementById(linkName);
+    const target = document.getElementById(targetName);
+    link.addEventListener('click',  () => target.scrollIntoView({
+        behavior: 'smooth'
+    }));
 }
 
-let activeSection = 0;
+createScrollLink("scroll-next", "location")
+
+createScrollLink("scroll-main", "main")
+createScrollLink("scroll-location", "location")
+createScrollLink("scroll-directions", "directions")
+createScrollLink("scroll-hotels", "hotels")

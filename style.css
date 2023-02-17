@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Luxurious+Script&family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Neucha&family=Petit+Formal+Script&family=Roboto+Condensed&family=Roboto:wght@300&family=Special+Elite&display=swap');
+
 body {
     font-family: 'Roboto', cursive;
     background-color: white;
@@ -10,81 +11,117 @@ body {
     font-family: 'Great Vibes', cursive;
 }
 
-.header-button {
-    margin-top: 5em;
+.text-center {text-align: center;}
+.h-100 {height:100%;}
+
+.scroll-next {
+    position: absolute; 
+    bottom: 0;
+    left: 45%;
 }
 
-.RSVP {
-    padding: 1em 4em;
-    color: #f0877a;
-    text-decoration: auto;
+.wrapper {
+    width: 100%;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero {
+    padding: 20px 10px 20px 10px;
+}
+
+.header-one {
+    font-size: 2.5em;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 400;
+    font-weight: 800;
+}
+
+#scroll-next {
     cursor: pointer;
-    transition: background-color 0.5s ease;
-    border: solid 1px #f0877a;
 }
 
-.RSVP:hover {
-    color: white;
-    background-color: #000000;
+.image-large {
+    max-height: 200px;
 }
 
-.header a {
+.button {
     all: unset;
-    color: black;
+    background-color: black;
+    color: white;
+    padding: 1.0em 1.5rem 1.0rem 1.5em;
     cursor: pointer;
 }
 
-.header a:hover {
-    text-decoration: underline !important;
+.rsvp {
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    background-color: black;
+    color: white;
+    /* padding: 1em 1.5rem 1rem 1.5em; */
+    border-radius: 4em;
+    cursor: pointer;
+    width: 79px;
+    height: 79px;
 }
 
-.active-section {
-    text-decoration: underline !important;
+.date-display {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 2em;
+    font-weight: 800;
 }
 
-@media (min-width: 1200px) {
-    .display-1 {
-        font-size: 8rem;
-    }
+.hover-scroller {
+    position: fixed;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 1em;
 }
 
-@media only screen and (max-width: 960px) {
-    #header {
-        height:138px !important;
-        margin-top: 0px !important;
-        box-shadow: -1px -2px 9px 3px #00000026;
-    }
-
-    .header {
-        margin-top: 0px !important;
-    }
-
-    #header img {
-        height: 100px !important;
-    }
-
-    #section-main{
-        margin-top: -9em !important;
-    }
-
-    .seperator {
-        display: none;
-    }
+.hover-scroller div {
+    
 }
 
-.card {    background-color: #ececec; margin-bottom:1em}
-
-/* HERO IMAGE */
-
-
-@media (min-width: 1440px) {
-    .hero-image {
-        height: 640px !important;
-    }
+.direction-links > div {
+    padding:2em;
 }
 
-@media (max-width: 960px) {
-    .under-header {
-        padding-top: 150px !important;
+.hover-scroller > div {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .hero {
+        padding: 80px 30px 80px 30px;
+    }
+
+    .image-large {
+        max-height: 400px;
+    }
+
+    .header-one {
+        font-size: 4em;
     }
 }
