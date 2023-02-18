@@ -13,3 +13,10 @@ createScrollLink("scroll-main", "main")
 createScrollLink("scroll-location", "location")
 createScrollLink("scroll-directions", "directions")
 createScrollLink("scroll-hotels", "hotels")
+
+const sections = [
+    "home",
+    "rsvp",
+    "location",
+    "hotels"
+]

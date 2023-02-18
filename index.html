@@ -5,85 +5,91 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Glen & Bea Wedding</title>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="hover-scroller">
-        <div id="scroll-main">Main</div>
-        <div id="scroll-location">Location</div>
-        <div id="scroll-directions">Directions</div>
-        <div id="scroll-hotels">Hotels</div>
-    </div>
+    <section>
+        <h2 style="font-family: 'Playfair Display', serif;" class="text-center f4">Glen & Bea Cecilie</h2>
+    </section>
 
-    <form method="GET" action="mailto:morrison.bruce.glen@gmail.com">
-        <button class="rsvp">
-            <div>Click To</div>
-            <div>RSVP</div>
-        </button>
-    </form>
+    <section class="nav flex-center text-center">
+        <div class="selected">HOME</div>
+        <div>RSVP</div>
+        <div>LOCATION</div>
+        <div>HOTELS</div>
+    </section>
 
-    <section id="main" class="hero" style="height: 100vh">
-        <div class="wrapper">
-            <div class="wrapper vertical">
-                <img src="1.png" class="image-large"/>
-                <div class="wrapper vertical">
-                    <h1 class="header-fancy">Glen & Bea Cecilie</h1>
-                </div>
-                <p style="padding:1em">Invite you to their wedding day</p>
-                <div class="date-display">
-                    <div>Sunday</div>
-                    <div style="font-size: 3em;">24</div>
-                    <div>September</div>
-                </div>
-                <div style="width: 100px;height:100px" id="scroll-next" >
-                    <object style="pointer-events: none"data="down.svg" width="100" height="100"> </object>
-                </div>
+    <section style="padding-top:12em">
+        <div>
+            <div style="display: flex;justify-content: center;align-items: center; text-align: center;background-color: #ffffff9e;">
+                <div style="width: 200px; font-size: 2em; color:#909090"class="fade-in-slow border-top-bottom">SUNDAY</div>
+                <div style="animation: moveIn 4s; width: 200px; font-size: 5em;">24</div>
+                <div style="width: 200px; font-size: 2em; color:#909090"class="fade-in-slow border-top-bottom">SEPTEMBER</div>
+            </div>
+            <div style="margin:0 auto;width:479px; margin-top:-19em; z-index:-1; position:relative;">
+                <img src="assets/1.png" class="fade-in-slow"/>
+            </div>
+            <div style="margin: 0 auto;width: 773px;margin-top: -40em;z-index: -3;position: relative;opacity: 0.4;">
+                <img width=800 src="assets/plants.jpg" class="fade-in-fast"/>
             </div>
         </div>
     </section>
 
-    <section id="location" class="hero">
-        <h1 class="header-one text-center" style="padding-bottom: 1em">Location</h1>
-        <div class="wrapper">
-            <div style="display:flex; flex-direction: row; height:14em">
-                <div class="h-100" style="flex: 1 0 50%;">
-                    <div class="vertical h-100" style="justify-content: space-around;">
-                        <div>
-                            Our wedding will take place at Melville Castle in the Scottish Edinburgh
-                        </div>
-                        <a class="button" target="_blank" href="https://www.google.com/maps?ll=55.891109,-3.104078&z=13&t=h&hl=en-US&gl=US&mapclient=embed&cid=15597627361630517583">
-                            Maps
-                        </a>
-                    </div>
-                </div>
-                <div style="flex: 1 0 50%;">
-                    <img src="front-wide.jpg" style="width: 100%"/>
-                </div>
-            </div>
-        </div>
+    <section id="hotels" style="display:none">
+        <table class="w-100">
+            <tr>
+                <th>Link</th>
+                <th>Cost</th>
+                <th>Direction</th>
+            </tr>
+            <tr>
+                <th><a href="https://www.premierinn.com/gb/en/hotels/scotland/lothian/edinburgh/edinburgh-a7-dalkeith.html?INNID=EDIESK&ARRdd=23&ARRmm=09&ARRyyyy=2023&NIGHTS=2&ROOMS=1&ADULT1=2&CHILD1=0&COT1=0&INTTYP1=DB&SID=4&ISH=true&BRAND=PI&CID=GHF_GB_GoogleSearch_desktop_selected+EDIESK&gclid=Cj0KCQiA6LyfBhC3ARIsAG4gkF-icjFrIAoAGPG4yhEDb_rKPGxEJRRjliGBzXA3e2MFGCDpLBIIpPAaApZvEALw_wcB" target="_blank">Premier Inn</a></th>
+                <th>£88</th>
+                <th><a href="https://www.google.com/maps/dir/Premier+Inn+Edinburgh+A7+(Dalkeith)+hotel,+Melville+Dykes+Rd,+Edinburgh+EH18+1AN/Melville+Castle+Hotel,+Gilmerton+Rd,+Edinburgh+EH18+1AP/@55.8915849,-3.1018257,15z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x4887becfc608f315:0x9a557c162d885b94!2m2!1d-3.0956315!2d55.8877182!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094" target="_blank">5 mins</a></th>
+            </tr>
+            <tr>
+                <th><a href="https://www.premierinn.com/gb/en/hotels/scotland/lothian/edinburgh/edinburgh-a7-dalkeith.html?INNID=EDIESK&ARRdd=23&ARRmm=09&ARRyyyy=2023&NIGHTS=2&ROOMS=1&ADULT1=2&CHILD1=0&COT1=0&INTTYP1=DB&SID=4&ISH=true&BRAND=PI&CID=GHF_GB_GoogleSearch_desktop_selected+EDIESK&gclid=Cj0KCQiA6LyfBhC3ARIsAG4gkF-icjFrIAoAGPG4yhEDb_rKPGxEJRRjliGBzXA3e2MFGCDpLBIIpPAaApZvEALw_wcB" target="_blank">The Melville Inn</a></th>
+                <th>£84</th>
+                <th><a href="https://www.google.com/maps/dir/The+Melville+Inn,+Melville+Nurseries,+Lasswade+EH18+1AR/Melville+Castle+Hotel,+Gilmerton+Road,+Edinburgh/@55.8938823,-3.1024138,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x4887becd5e8c30df:0x644b6e4b7947c747!2m2!1d-3.0963907!2d55.8951061!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0" target="_blank">5 mins</a></th>
+            </tr>
+            <tr>
+                <th><a href="https://www.travelodge.co.uk/hotels/207/Edinburgh-Dreghorn-hotel?checkIn=24/09/2023&checkOut=25/09/2023&rooms[0][adults]=2&rooms[0][children]=0" target="_blank">Travelodge</a></th>
+                <th>£49.99</th>
+                <th><a href="https://www.google.com/maps/dir/46+Dreghorn+Link,+Edinburgh+EH13+9QR/Melville+Castle+Hotel,+Gilmerton+Road,+Edinburgh/@55.896638,-3.2317033,12z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x4887c6d65ebe79f7:0x43e871f837760716!2m2!1d-3.2317913!2d55.9008879!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0" target="_blank">11 mins</a></th>
+            </tr>
+            <tr>
+                <th><a href="https://www.booking.com/hotel/gb/the-sun-inn-dalkeith.en-gb.html?aid=356930&label=metagha-link-LUGB-hotel-5808860_dev-desktop_los-2_bw-218_dow-Saturday_defdate-0_room-0_gstadt-2_rateid-public_aud-0_gacid-6623578758_mcid-50_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20230923__lp-1007293_r-762314483332077779&all_sr_blocks=580886004_226879934_2_1_0;checkin=2023-09-24;checkout=2023-09-25;dest_id=-2594021;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=580886004_226879934_2_1_0;hpos=1;matching_block_id=580886004_226879934_2_1_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=580886004_226879934_2_1_0__11688;srepoch=1676645960;srpvid=95896963d01f0059;type=total;ucfs=1&#hotelTmpl" target="_blank">The Sun Inn</a></th>
+                <th>£117</th>
+                <th><a href="https://www.google.com/maps/dir/Lothian+Bridge,+Dalkeith+EH22+4TR/Melville+Castle+Hotel,+Gilmerton+Road,+Edinburgh/@55.88419,-3.1084847,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x4887be951cbaecd7:0x8a10fa5d521b3524!2m2!1d-3.0780416!2d55.8726267!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0" target="_blank">6 mins</a></th>
+            </tr>
+            <tr>
+                <th><a href="" target="_blank">The Dalkeith Hotel</a></th>
+                <th>£119</th>
+                <th><a href="https://www.booking.com/hotel/gb/dalkeith-apart.en-gb.html?aid=356930&label=metagha-link-LUGB-hotel-5808860_dev-desktop_los-2_bw-218_dow-Saturday_defdate-0_room-0_gstadt-2_rateid-public_aud-0_gacid-6623578758_mcid-50_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20230923__lp-1007293_r-762314483332077779&all_sr_blocks=562305222_363574960_2_0_0;checkin=2023-09-24;checkout=2023-09-25;dest_id=-2594021;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=562305222_363574960_2_0_0;hpos=1;matching_block_id=562305222_363574960_2_0_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=562305222_363574960_2_0_0__11800;srepoch=1676646057;srpvid=96836993431d019a;type=total;ucfs=1&#hotelTmpl" target="_blank">6 mins</a></th>
+            </tr>
+            <tr>
+                <th><a href="https://www.premierinn.com/gb/en/hotels/scotland/lothian/edinburgh/edinburgh-a1-musselburgh.html?INNID=EDISWE&ARRdd=24&ARRmm=09&ARRyyyy=2023&NIGHTS=1&ROOMS=1&ADULT1=2&CHILD1=0&COT1=0&INTTYP1=DB&SID=4&ISH=true&BRAND=PI&CID=GHF_GB_GoogleSearch_desktop_selected+EDISWE&gclid=Cj0KCQiA6LyfBhC3ARIsAG4gkF-icP6OEP0nx6fJdV7MERsfFJv2CyKZPIYhAPnuAf9ZkGPaB3q6_W8aAgcgEALw_wcB" target="_blank">Premier Inn</a></th>
+                <th>£53</th>
+                <th><a href="https://www.google.com/maps/dir/EH21+8PT,+Inveresk,+Musselburgh/Melville+Castle+Hotel,+Gilmerton+Road,+Edinburgh/@55.9097756,-3.0978781,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x4887bbc1460a8e85:0x27d2d79a227d8f87!2m2!1d-3.0347784!2d55.9255798!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0" target="_blank">15 mins</a></th>
+            </tr>
+            <tr>
+                <th><a href="" target="_blank">Premier Inn</a></th>
+                <th>£56</th>
+                <th><a href="https://www.google.com/maps/dir/Premier+Inn+Edinburgh+A1+(Newcraighall)+hotel,+91+Newcraighall+Rd,+Edinburgh+EH21+8RX/Melville+Castle+Hotel,+Gilmerton+Road,+Edinburgh/@55.912923,-3.126803,12.5z/data=!4m18!4m17!1m5!1m1!1s0x4887b90c19c4928d:0x30f19cfa176e1ad3!2m2!1d-3.0949274!2d55.9350649!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!2m3!6e0!7e2!8j1676628600!3e0" target="_blank">15 mins</a></th>
+            </tr>
+            <tr>
+                <th><a href="" target="_blank"></a></th>
+                <th>£125</th>
+                <th><a href="" target="_blank"></a></th>
+            </tr>
+        </table>
     </section>
 
-    <section id="directions" class="hero">
-        <h1 class="header-one text-center" style="padding-bottom: 1em">Directions</h1>
-        <div class="wrapper">
-            <div style="display:flex; flex-direction: row; height: 500px">
-                <div style="flex: 1 0 50%;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2237.360185403564!2d-3.10627224803658!3d55.8911123886877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887becc84d0aec9%3A0xd875e77214e6794f!2sMelville%20Castle%20Hotel!5e0!3m2!1sen!2suk!4v1676663332157!5m2!1sen!2suk" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div style="flex: 1 0 50%;" class="h-100 vertical direction-links">
-                    <div><a href="https://www.google.com/maps/dir/Edinburgh+Airport,+Edinburgh+EH12+9DN/Melville+Castle+Hotel+Gilmerton+Rd+Edinburgh+EH18+1AP/@55.9204025,-3.366574,11z/data=!4m14!4m13!1m5!1m1!1s0x4887c50e93e3017d:0x19530a2592b1d59b!2m2!1d-3.3614532!2d55.950785!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0" target="_blank">Direction from Edinburgh Airport</a></div>
-                    <div><a href="https://www.google.com/maps/dir/Glasgow+Airport+(GLA),+Paisley/Melville+Castle+Hotel+Gilmerton+Rd+Edinburgh+EH18+1AP/@55.8810938,-4.3298932,9z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x48884eb90111e0dd:0x24a888b519aa330b!2m2!1d-4.4350529!2d55.8690744!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0" target="_blank">Direction from Glasgow Airport</a></div>
-                    <div><a href="https://www.google.com/maps/dir/Edinburgh/Melville+Castle+Hotel+Gilmerton+Rd+Edinburgh+EH18+1AP/@55.9490796,-3.1954492,15.5z/data=!4m14!4m13!1m5!1m1!1s0x4887b800a5982623:0x64f2147b7ce71727!2m2!1d-3.188267!2d55.953252!1m5!1m1!1s0x4887becc84d0aec9:0xd875e77214e6794f!2m2!1d-3.1040782!2d55.8911094!3e0" target="_blank">Direction from Edinburgh City Center</a></div>
-                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="hotels" class="hero">
-        <h1 class="header-one text-center" style="padding-bottom: 1em">Hotels</h1>
-        <div class="wrapper">
-            
+    <section>
+        <div style="margin: 0 auto">
+            <img src="assets/plants.jpg" width="4a00px"/>
         </div>
     </section>
 

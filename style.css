@@ -1,133 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Luxurious+Script&family=Roboto+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Petit+Formal+Script&family=Roboto+Condensed&family=Roboto:wght@300&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Cutive+Mono&family=Playfair+Display:ital,wght@1,500&family=Quintessential&family=Roboto+Mono:wght@300&display=swap');
 
 body {
-    font-family: 'Roboto', cursive;
-    background-color: white;
+    font-family: 'Roboto Mono', monospace;
 }
 
-.text-center {text-align: center;}
-.h-100 {height:100%;}
-
-.scroll-next {
-    position: absolute; 
-    bottom: 0;
-    left: 45%;
-}
-
-.wrapper {
-    width: 100%;
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.vertical {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.hero {
-    padding: 20px 10px 20px 10px;
-}
-
-.header-one {
-    margin-top: 2.5em;
-    font-size: 2em;
-    padding: 0px;
-    margin: 0px;
+h2 {
     font-weight: 400;
-    font-weight: 800;
+    margin: 0.5em;
 }
 
-.header-fancy {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.5em;
-    padding: 0px;
-    margin: 0px;
-    font-weight: 400;
-    font-weight: 800;
-}
+/* HELPERS */
+    .text-center {text-align: center;}
+    .f1 {font-size: 1em;}
+    .f2 {font-size: 2em;}
+    .f3 {font-size: 4em;}
+    .f4 {font-size: 5em;}
+    .flex {display: flex;}
+    .flex-center {display: flex; justify-content: center;}
+    .w-100{width:100%;}
+/* HELPERS */
 
-#scroll-next {
-    cursor: pointer;
-}
-
-.image-large {
-    max-height: 200px;
-}
-
-.button {
-    all: unset;
-    background-color: black;
-    color: white;
-    padding: 1.0em 1.5rem 1.0rem 1.5em;
-    cursor: pointer;
-}
-
-.rsvp {
-    position: fixed;
-    left: 15px;
-    bottom: 15px;
-    background-color: black;
-    color: white;
-    /* padding: 1em 1.5rem 1rem 1.5em; */
-    border-radius: 4em;
-    cursor: pointer;
-    width: 79px;
-    height: 79px;
-}
-
-.date-display {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 2em;
-    font-weight: 800;
-}
-
-.hover-scroller {
-    position: fixed;
-    right: 5px;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    color: white;
+.nav { 
+    max-width: 960px;
+    margin: 0 auto;
     padding: 1em;
+    margin-bottom: 3em;
 }
 
-.hover-scroller div {
-    
+section {
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.direction-links > div {
-    padding:2em;
-}
-
-.hover-scroller > div {
+.nav > div {
+    flex: 1 1 0px;
     cursor: pointer;
 }
 
-@media only screen and (min-width: 600px) {
-    /* For tablets: */
-
+.nav > .selected {
+    text-decoration: underline;
+    font-weight: bolder;
+    color: #c10000;
 }
 
-@media only screen and (min-width: 768px) {
+.border-top-bottom {
+    border: 1px solid;
+    border-left: 0px;
+    border-right: 0px;
+}
 
-    /* For desktop: */
-    .hero {
-        padding: 80px 30px 80px 30px;
-    }
+.fade-in-slow {animation: fadeInSlow ease 5s;}
+.fade-in-fast {animation: fadeInFast ease 5s;}
 
-    .image-large {
-        max-height: 400px;
-    }
 
-    .header-fancy {
-        font-size: 4em;
-    }
+
+@keyframes moveIn {
+    0% {padding:40px;opacity:0;}
+    100% {padding:0px;opacity:1;}
+}
+
+@keyframes fadeInSlow {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes fadeInFast {
+    0% {opacity:0;}
+    50% {opacity:0;}
+    100% {opacity:1;}
 }
