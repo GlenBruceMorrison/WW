@@ -11,13 +11,19 @@ const activeSection = () => {
 
 const setActiveSection = (x) => {
     for (let element of sections) {
-      document.getElementById(element).style.display = 'none';
-      document.getElementById(`nav-${element}`).classList.remove('selected');
+        document.getElementById(element).style.display = 'none';
+        var elems = document.querySelectorAll(`.nav-${element}`);
+        [].forEach.call(elems, function(el) {
+            el.classList.remove("selected");
+        });
     }
-    
+
     document.querySelector(".nav-container input").checked = false;
     document.getElementById(sections[x]).style.display = 'block'
-    document.getElementById(`nav-${sections[x]}`).classList.add('selected');
+    var elems = document.querySelectorAll(`.nav-${sections[x]}`);
+    [].forEach.call(elems, function(el) {
+        el.classList.add("selected");
+    });
 }
 
 function renderHotels() {

@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-color: #f3d7c7;z-index: -20;position: relative; overflow:hidden;">
+<body style="background-color: #f3d7c7;position: absolute;left: 0;right: 0;top: 0;bottom: 0;">
     <nav class="nav-hamburger">
-        <div class="navbar">
+        <div class="navbar" style="height:0px">
             <div class="ncontainer nav-container">
                 <input class="checkbox" type="checkbox" name="" id="" />
                 <div class="hamburger-lines">
@@ -37,27 +37,28 @@
                     <span class="line line3"></span>
                 </div>
             <div class="menu-items" style="background-color: white;">
-                <div id="nav-home" onclick="setActiveSection(0)" class="selected">HOME</div>
+                <div class="nav-home" onclick="setActiveSection(0)" class="selected">HOME</div>
                 <div>RSVP</div>
-                <div id="nav-location" onclick="setActiveSection(1)">LOCATION</div>
-                <div id="nav-schedule" onclick="setActiveSection(2)">SCHEDULE</div>
-                <div id="nav-hotels" onclick="setActiveSection(3)">HOTELS</div>
+                <div class="nav-location" onclick="setActiveSection(1)">LOCATION</div>
+                <div class="nav-schedule" onclick="setActiveSection(2)">SCHEDULE</div>
+                <div class="nav-hotels" onclick="setActiveSection(3)">HOTELS</div>
             </div>
           </div>
         </div>
       </nav>
 
-    <div style="height: 100vh;box-shadow:-2px -1px 20px 1px rgb(0 0 0 / 11%); position: relative;background-color: white; max-width:960px; z-index:-10; margin: 0 auto; padding-left: calc(100vw - 100%); overflow-x:hidden;">
+    <div style="min-height: 100vh;box-shadow:-2px -1px 20px 1px rgb(0 0 0 / 11%); position: relative;background-color: white; max-width:960px; margin: 0 auto;position: absolute;left: 0;right: 0;top: 0;">
         <section>
             <h2 style="font-family: 'Source Serif Pro', serif;" class="text-center f5">Glen & Bea Cecilie</h2>
+            <p class="invite-text">Invite your to join them on thier wedding day</p>
         </section>
 
         <section class="nav flex-center text-center" style="background-color: white; display: none;">
-            <div id="nav-home" onclick="setActiveSection(0)" class="selected">HOME</div>
+            <div class="nav-home selected" onclick="setActiveSection(0)">HOME</div>
             <div>RSVP</div>
-            <div id="nav-location" onclick="setActiveSection(1)">LOCATION</div>
-            <div id="nav-schedule" onclick="setActiveSection(2)">SCHEDULE</div>
-            <div id="nav-hotels" onclick="setActiveSection(3)">HOTELS</div>
+            <div class="nav-location" onclick="setActiveSection(1)">LOCATION</div>
+            <div class="nav-schedule" onclick="setActiveSection(2)">SCHEDULE</div>
+            <div class="nav-hotels" onclick="setActiveSection(3)">HOTELS</div>
         </section>
 
 
@@ -65,7 +66,7 @@
 
         <section id="home" class="active-section" style="height: 600px; overflow:visible">
             <div class="wreath-container">
-                <div class="date-container">
+                <div class="date-container" style="z-index: 3;">
                     <div style="width: 200px; font-size: 2em; color:#909090" class="fade-in-slow border-top-bottom">
                         SUNDAY
                     </div>
@@ -74,10 +75,10 @@
                         SEPTEMBER
                     </div>
                 </div>
-                <div class="img-roses">
+                <div class="img-roses" style="z-index: 2;">
                     <img src="assets/1.png" class="fade-in-slow" />
                 </div>
-                <div class="img-wreath">
+                <div class="img-wreath" style="z-index: 1;">
                     <img src="assets/plants.jpg" class="fade-in-fast" />
                 </div>
             </div>
