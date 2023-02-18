@@ -49,10 +49,28 @@ section {
     border-right: 0px;
 }
 
+.date-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff9e;
+    flex-direction: column;
+}
+
+@media (min-width: 1440px) {
+    .date-container {
+        flex-direction: row;
+    }
+
+    #section-home {
+        padding-top:14em;
+    }
+}
+
+
 .fade-in-slow {animation: fadeInSlow ease 5s;}
 .fade-in-fast {animation: fadeInFast ease 5s;}
-
-
 
 @keyframes moveIn {
     0% {padding:40px;opacity:0;}
