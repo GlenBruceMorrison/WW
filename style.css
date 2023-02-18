@@ -14,7 +14,7 @@ h2 {
     .f1 {font-size: 1em;}
     .f2 {font-size: 2em;}
     .f3 {font-size: 4em;}
-    .f4 {font-size: 5em;}
+    .f4 {font-size: 3em;}
     .flex {display: flex;}
     .flex-center {display: flex; justify-content: center;}
     .w-100{width:100%;}
@@ -56,15 +56,44 @@ section {
     text-align: center;
     background-color: #ffffff9e;
     flex-direction: column;
+    margin-top: 10em;
+}
+
+.img-roses {
+    margin: 0 auto;
+    width: 479px;
+    margin-top: -22em;
+    z-index:-1;
+    position:relative;
+}
+
+.img-wreath {
+    margin: 0 auto;
+    width: 773px;
+    margin-top: -41em;
+    z-index: -3;
+    position: relative;
+    opacity: 0.4;
 }
 
 @media (min-width: 1440px) {
     .date-container {
         flex-direction: row;
+        margin-top: 20em;
     }
 
-    #section-home {
-        padding-top:14em;
+    .nav {
+        margin-bottom: 10em;
+    }
+
+    .f3 {font-size: 5em;}
+
+    .img-roses {
+        margin-top: -19em;
+    }
+    
+    .img-wreath {
+        margin-top: -40em;
     }
 }
 
