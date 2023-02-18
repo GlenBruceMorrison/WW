@@ -10,7 +10,6 @@
 body {
     font-family: 'Source Serif Pro', cursive;
     margin: 0;
-    background: #ffffff;
 }
 
 h2 {
@@ -26,8 +25,8 @@ h2 {
 .f4 {font-size: 2em;}
 
 .f5 {
-    font-size: 2em;
-    padding: 2em;
+    font-size: 5em;
+    padding: 0em;
 }
 
 .flex {display: flex;}
@@ -77,6 +76,10 @@ section {
     border: 1px solid;
     border-left: 0px;
     border-right: 0px;
+}
+
+.card {
+    width:100% !important;
 }
 
 .date-container {
@@ -142,6 +145,10 @@ section {
         flex-direction: row;
         padding: 0em;
         margin-top: 20vh;
+    }
+    .card {
+        width:45% !important;
+        text-align: center;
     }
 
     .nav {
