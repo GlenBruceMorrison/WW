@@ -74,6 +74,7 @@ section {
     z-index: -3;
     position: relative;
     opacity: 0.4;
+    margin-left: 91px
 }
 
 @media (min-width: 1440px) {
@@ -94,6 +95,7 @@ section {
     
     .img-wreath {
         margin-top: -40em;
+        margin-left: 91px
     }
 }
 
