@@ -14,7 +14,8 @@ const setActiveSection = (x) => {
       document.getElementById(element).style.display = 'none';
       document.getElementById(`nav-${element}`).classList.remove('selected');
     }
-
+    
+    document.querySelector(".nav-container input").checked = false;
     document.getElementById(sections[x]).style.display = 'block'
     document.getElementById(`nav-${sections[x]}`).classList.add('selected');
 }

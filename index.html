@@ -27,14 +27,32 @@
 </head>
 
 <body style="background-color: #f3d7c7;z-index: -20;position: relative; overflow:hidden;">
-    
+    <nav class="nav-hamburger">
+        <div class="navbar">
+            <div class="ncontainer nav-container">
+                <input class="checkbox" type="checkbox" name="" id="" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+            <div class="menu-items" style="background-color: white;">
+                <div id="nav-home" onclick="setActiveSection(0)" class="selected">HOME</div>
+                <div>RSVP</div>
+                <div id="nav-location" onclick="setActiveSection(1)">LOCATION</div>
+                <div id="nav-schedule" onclick="setActiveSection(2)">SCHEDULE</div>
+                <div id="nav-hotels" onclick="setActiveSection(3)">HOTELS</div>
+            </div>
+          </div>
+        </div>
+      </nav>
 
     <div style="height: 100vh;box-shadow:-2px -1px 20px 1px rgb(0 0 0 / 11%); position: relative;background-color: white; max-width:960px; z-index:-10; margin: 0 auto; padding-left: calc(100vw - 100%); overflow-x:hidden;">
         <section>
             <h2 style="font-family: 'Source Serif Pro', serif;" class="text-center f5">Glen & Bea Cecilie</h2>
         </section>
 
-        <section class="nav flex-center text-center" style="background-color: white;">
+        <section class="nav flex-center text-center" style="background-color: white; display: none;">
             <div id="nav-home" onclick="setActiveSection(0)" class="selected">HOME</div>
             <div>RSVP</div>
             <div id="nav-location" onclick="setActiveSection(1)">LOCATION</div>
