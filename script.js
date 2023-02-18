@@ -9,6 +9,7 @@ function createScrollLink(linkName, targetName) {
 
 const sections = [
     "home",
+    "schedule",
     "hotels"
 ]
 
