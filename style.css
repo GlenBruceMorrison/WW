@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Cutive+Mono&family=Playfair+Display:ital,wght@1,500&family=Quintessential&family=Roboto+Mono:wght@300&display=swap');
 
+html, body {
+    overflow-x:hidden 
+} 
+
 body {
     font-family: 'Roboto Mono', monospace;
 }
@@ -32,6 +36,10 @@ section {
     margin: 0 auto;
 }
 
+#section-home {
+    margin-top: -5em;
+}
+
 .nav > div {
     flex: 1 1 0px;
     cursor: pointer;
@@ -56,31 +64,45 @@ section {
     text-align: center;
     background-color: #ffffff9e;
     flex-direction: column;
-    margin-top: 10em;
+    margin-top: 20vh;
+    padding: 1em;
+    width: 100%
 }
 
 .img-roses {
-    margin: 0 auto;
     width: 479px;
     margin-top: -22em;
     z-index:-1;
-    position:relative;
+    position: relative;
 }
 
 .img-wreath {
-    margin: 0 auto;
-    width: 773px;
-    margin-top: -41em;
     z-index: -3;
     position: relative;
     opacity: 0.4;
-    margin-left: 91px
+
+    width: 400px;
+    margin-top: -34em;
+    width: 38em;
+}
+
+.img-wreath > img {
+    width: 100%;
+}
+
+.wreath-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%
 }
 
 @media (min-width: 1440px) {
     .date-container {
         flex-direction: row;
-        margin-top: 20em;
+        padding: 0em;
     }
 
     .nav {
@@ -94,8 +116,6 @@ section {
     }
     
     .img-wreath {
-        margin-top: -40em;
-        margin-left: 91px
     }
 }
 
