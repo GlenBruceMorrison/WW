@@ -24,19 +24,109 @@ h2 {
 .f3 {font-size: 4em;}
 .f4 {font-size: 2em;}
 
-.f5 {
+/* HEADER TEXT */
+/*===================================*/
+.glen-bea {
     font-size: 3em;
     padding: 0em;
-    padding-top: 3em;
+    padding-top: 1em;
 }
 
 .invite-text {
     text-align: center;
     margin-top: 1em;
     color: green;
-    padding-bottom: 4em;
     font-style: oblique;
+    background-color: white;
+    z-index: 2;
+    position: relative;
 }
+
+@media (min-width: 960px) {
+    .glen-bea {
+        font-size: 3em;
+        padding: 1em;
+        padding-bottom: 2em;
+    }
+
+    .invite-text {
+        text-align: center;
+        margin-top: -7em;
+        color: green;
+        padding-bottom: 4em;
+        padding-top: 0em;
+        font-style: oblique;
+    }
+}
+/*===================================*/
+
+
+
+/* ROSE CENTER PIECE*/
+/*===================================*/
+.date-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff9e;
+    flex-direction: column;
+    margin-top: 5vh;
+    padding: 1em;
+    width: 100%
+}
+
+.img-roses {
+    width: 479px;
+    margin-top: -22em;
+    position: relative;
+}
+
+.img-wreath {
+    position: relative;
+    opacity: 0.4;
+
+    width: 400px;
+    margin-top: -34em;
+    width: 38em;
+}
+
+.img-wreath > img {
+    width: 100%;
+}
+
+.wreath-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 960px) {
+    .date-container {
+        flex-direction: row;
+        padding: 0em;
+        margin-top: 20vh;
+    }
+    
+    .img-roses {
+        margin-top: -19em;
+    }
+
+    .wreath-container {
+        padding-top: 4em;
+    }
+}
+/*===================================*/
+
+
 
 .flex {display: flex;}
 .flex-center {display: flex; justify-content: center;}
@@ -92,37 +182,6 @@ section {
     width:100% !important;
 }
 
-.date-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #ffffff9e;
-    flex-direction: column;
-    margin-top: 5vh;
-    padding: 1em;
-    width: 100%
-}
-
-.img-roses {
-    width: 479px;
-    margin-top: -22em;
-    position: relative;
-}
-
-.img-wreath {
-    position: relative;
-    opacity: 0.4;
-
-    width: 400px;
-    margin-top: -34em;
-    width: 38em;
-}
-
-.img-wreath > img {
-    width: 100%;
-}
-
 .myTable { 
     width: 100%;
     text-align: left;
@@ -137,15 +196,6 @@ section {
 .myTable th { 
     padding: 10px;
     border: 1px solid rgb(243, 209, 122); 
-}
-
-.wreath-container {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    width: 100%
 }
 
 @media (min-width: 960px) {
@@ -171,21 +221,6 @@ section {
 
     .img-roses {
         margin-top: -19em;
-    }
-    
-    .f5 {
-        font-size: 3em;
-        padding: 1em;
-        padding-bottom: 2em;
-    }
-
-    .invite-text {
-        text-align: center;
-        margin-top: -7em;
-        color: green;
-        padding-bottom: 2em;
-        padding-top: 0em;
-        font-style: oblique;
     }
 }
 

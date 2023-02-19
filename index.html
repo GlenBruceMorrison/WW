@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-color: #f3d7c7;position: absolute;left: 0;right: 0;top: 0;bottom: 0;">
+<body style="background-color: #f3d7c7;position: absolute;left: 0;right: 0;top: 0;bottom: 0; overflow-x: hidden;">
     <nav class="nav-hamburger">
         <div class="navbar" style="height:0px">
             <div class="ncontainer nav-container">
@@ -49,7 +49,7 @@
 
     <div style="min-height: 100vh;box-shadow:-2px -1px 20px 1px rgb(0 0 0 / 11%); position: relative;background-color: white; max-width:960px; margin: 0 auto;position: absolute;left: 0;right: 0;top: 0;">
         <section>
-            <h2 style="font-family: 'Source Serif Pro', serif;" class="text-center f5">Glen & Bea Cecilie</h2>
+            <h2 style="font-family: 'Source Serif Pro', serif;" class="text-center glen-bea">Glen & Bea Cecilie</h2>
             <p class="invite-text">Invite your to join them on thier wedding day</p>
         </section>
 
@@ -66,7 +66,7 @@
 
         <section id="home" class="active-section" style="height: 600px; overflow:visible">
             <div class="wreath-container">
-                <div class="date-container" style="z-index: 3;">
+                <div class="date-container" style="z-index: 3; width: 960px;">
                     <div style="width: 200px; font-size: 2em; color:#909090" class="fade-in-slow border-top-bottom">
                         SUNDAY
                     </div>
@@ -95,17 +95,13 @@
         <section id="hotels" style="display:none">
             <div id="hotel-view" style="margin-left: 3em;margin-right: 3em;"></div>
         </section>
-
-
-
-
     </div>
 
     <script id="template-hotel-table" type="x-tmpl-mustache">
         <div style="display:flex; flex-wrap:wrap; flex-direction:row; justify-content:space-between;">
             {{#hotels}}
             <div class="card" style="width: 200px">
-                <a target="_blank" href="{{link}}">{{name}}</a>
+                <a target="_blank" href="{{link}}" style="color:#006E51;font-weight:bold;">{{name}}</a>
                 <p>{{pricePerNight}}</p>
                 <a target="_blank" href="{{directionLink}}">{{distance}} minutes</a>
             </div>
