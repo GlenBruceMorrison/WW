@@ -7,13 +7,21 @@
   box-sizing: border-box;
 }
 
+body, html {
+    overflow-x: hidden;
+}
+
+.site {
+    overflow-x: hidden;
+    /* Unnecessary IMHO, uncomment next line to force hidden behavior */
+     overflow-x: hidden !important; 
+    /* Additional tunning proposed by the community */
+}
+
 body {
     font-family: 'Source Serif Pro', cursive;
     margin: 0;
     /*background-image: url('assets/watercolour-1325655__480.jpg');*/
-    overflow-x: hidden;
-    width: 100vw;
-
 }
 
 h2 {
