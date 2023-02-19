@@ -182,22 +182,6 @@ section {
     width:100% !important;
 }
 
-.myTable { 
-    width: 100%;
-    text-align: left;
-    background-color: lemonchiffon;
-    border-collapse: collapse; 
-}
-.myTable th { 
-    background-color: rgb(255, 210, 96);
-    color: rgb(0, 0, 0); 
-}
-.myTable td, 
-.myTable th { 
-    padding: 10px;
-    border: 1px solid rgb(243, 209, 122); 
-}
-
 @media (min-width: 960px) {
     .date-container {
         flex-direction: row;
@@ -224,24 +208,33 @@ section {
     }
 }
 
-
-.fade-in-slow {animation: fadeInSlow ease 5s;}
-.fade-in-fast {animation: fadeInFast ease 5s;}
+.fade-in-slow {animation: fadeInSlow ease 2s;}
+.fade-in-fast {animation: fadeInFast ease 4s;}
 
 @keyframes moveIn {
-    0% {padding:40px;opacity:0;}
-    100% {padding:0px;opacity:1;}
+    0% {
+        padding:40px;
+        opacity:0;
+        transform: scale(1.5);
+    }
+    100% {
+        padding:0px;
+        opacity:1;
+        transform: scale(1);
+    }
 }
 
 @keyframes fadeInSlow {
-    0% {opacity:0;}
-    100% {opacity:1;}
+    0% {opacity:0;
+        transform: scale(1.5);}
+    100% {opacity:1;
+        transform: scale(1);}
 }
 
 @keyframes fadeInFast {
     0% {opacity:0;}
-    50% {opacity:0;}
-    100% {opacity:1;}
+    30% {opacity:0;transform: translateY(50px);}
+    90% {opacity:1;transform: translateY(0);}
 }
 
 /* HAMBURGER */
@@ -373,4 +366,3 @@ section {
 .nav-container input[type="checkbox"]:checked ~ .logo{
     display: none;
 }
-  

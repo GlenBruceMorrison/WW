@@ -1,8 +1,34 @@
+var elem = document.getElementById("changeText");
+
+function change(text) {
+    elem.classList.add('hide');
+    setTimeout(function () {
+        elem.innerHTML = text;
+        elem.classList.remove('hide');
+    }, 500);
+}
+
 const sections = [
-    "home",
-    "location",
-    "schedule",
-    "hotels"
+    {
+        name: "home",
+        title: "Glen & Bea Cecilie",
+        subtitle: "Invite you to thier wedding day!"
+    },
+    {
+        name: "location",
+        title: "Melville Castle",
+        subtitle: "Edinburgh, Scotland"
+    },
+    {
+        name: "schedule",
+        title: "On The Day",
+        subtitle: "A comprihensive run-down of the day - Times may change down the road but arrival of guests are set in stone!"
+    },
+    {
+        name:"hotels",
+        title: "Hotels Nearby",
+        subtitle: "Some hotels that are near the castle - There are many more hotels close that are not listed here"
+    }
 ]
 
 const activeSection = () => {
@@ -11,19 +37,23 @@ const activeSection = () => {
 
 const setActiveSection = (x) => {
     for (let element of sections) {
-        document.getElementById(element).style.display = 'none';
-        var elems = document.querySelectorAll(`.nav-${element}`);
+        document.getElementById(element.name).style.display = 'none';
+        var elems = document.querySelectorAll(`.nav-${element.name}`);
         [].forEach.call(elems, function(el) {
             el.classList.remove("selected");
         });
     }
 
+    document.getElementsByClassName('invite-text')[0].innerHTML = sections[x].subtitle;
+
     document.querySelector(".nav-container input").checked = false;
-    document.getElementById(sections[x]).style.display = 'block'
-    var elems = document.querySelectorAll(`.nav-${sections[x]}`);
+    document.getElementById(sections[x].name).style.display = 'block'
+    var elems = document.querySelectorAll(`.nav-${sections[x].name}`);
     [].forEach.call(elems, function(el) {
         el.classList.add("selected");
     });
+
+    document.getElementsByClassName('glen-bea')[0].innerHTML = sections[x].title;
 }
 
 function renderHotels() {
