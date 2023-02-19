@@ -8,26 +8,44 @@ function change(text) {
     }, 500);
 }
 
+
+
+var delta = Math.abs(new Date(2023, 9, 24, 13, 30) - Date.now()) / 1000;
+
+var days = Math.floor(delta / 86400);
+delta -= days * 86400;
+
+var hours = Math.floor(delta / 3600) % 24;
+delta -= hours * 3600;
+
+var minutes = Math.floor(delta / 60) % 60;
+delta -= minutes * 60;
+
+var seconds = delta % 60;
+
+var timerText = `Invite you to their wedding day! In ${days} days and ${hours} hours!`;
+document.getElementsByClassName('invite-text')[0].innerHTML = timerText;
+
 const sections = [
     {
         name: "home",
         title: "Glen & Bea Cecilie",
-        subtitle: "Invite you to thier wedding day!"
+        subtitle: timerText
     },
     {
         name: "location",
         title: "Melville Castle",
-        subtitle: "Edinburgh, Scotland"
+        subtitle: "Edinburgh, Scotland, EH18 1AP"
     },
     {
         name: "schedule",
         title: "On The Day",
-        subtitle: "A comprihensive run-down of the day - Times may change down the road but arrival of guests are set in stone!"
+        subtitle: "A comprihensive run-down of the day. Times may change down the road but arrival of guests are set in stone!"
     },
     {
         name:"hotels",
         title: "Hotels Nearby",
-        subtitle: "Some hotels that are near the castle - There are many more hotels close that are not listed here"
+        subtitle: "Some hotels that are near the castle. The castle is close to Edinburgh, so there are plenty of nearby hotels to choose from."
     }
 ]
 
@@ -128,84 +146,84 @@ function renderSchedule() {
         scehdules : [
             {
                 title: 'Guests Arrival',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '13:30',
                 icon: 'local_taxi',
                 side: 'left'
             },
             {
                 title: 'Ceremony',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '14:00',
                 icon: 'church',
                 side: 'right'
             },
             {
                 title: 'Drinks Reception & Canapes',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '14:40',
                 icon: 'brunch_dining',
                 side: 'left'
             },
             {
                 title: 'Call To Dinner',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '15:45',
                 icon: 'notifications_active',
                 side: 'right'
             },
             {
                 title: 'Speeches',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '16:00',
                 icon: 'record_voice_over',
                 side: 'left'
             },
             {
                 title: 'Wedding Breakfast',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '16:30',
                 icon: 'restaurant',
                 side: 'right'
             },
             {
                 title: 'Comfort Break',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '18:30',
                 icon: 'chair',
                 side: 'left'
             },
             {
                 title: 'Evening Guests Arrival',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '19:00',
                 icon: 'emoji_people',
                 side: 'right'
             },
             {
                 title: 'Cake Cutting & First Dance',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '19:30',
                 icon: 'cake',
                 side: 'left'
             },
             {
                 title: 'Scottish Ceilidh Dancing',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '19:45',
                 icon: 'audiotrack',
                 side: 'right'
             },
             {
                 title: 'Evening Buffet',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '21:30',
                 icon: 'brunch_dining',
                 side: 'left'
             },
             {
                 title: 'End Of Wedding',
-                description: 'Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non.',
+                description: '',
                 time: '00:00',
                 icon: 'bedtime',
                 side: 'right'
