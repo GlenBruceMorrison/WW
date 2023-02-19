@@ -33,6 +33,11 @@ const sections = [
         subtitle: timerText
     },
     {
+        name: "rsvp",
+        title: "RSVP",
+        subtitle: "Let us know if you can make it!"
+    },
+    {
         name: "location",
         title: "Melville Castle",
         subtitle: "Edinburgh, Scotland, EH18 1AP"

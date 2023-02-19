@@ -10,15 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 
-
-
-
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&family=Merienda:wght@300&family=Roboto&family=Satisfy&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
 
-
-
-
-
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="schedule.css">
@@ -27,27 +21,28 @@
 
 <body>
     <div class="site">
-        <nav class="nav-hamburger">
-            <div class="navbar" style="height:0px">
-                <div class="ncontainer nav-container">
-                    <input class="checkbox" type="checkbox" name="" id="" />
-                    <div class="hamburger-lines">
-                        <span class="line line1"></span>
-                        <span class="line line2"></span>
-                        <span class="line line3"></span>
-                    </div>
-                <div class="menu-items" style="background-color: white;">
-                    <div class="nav-home" onclick="setActiveSection(0)" class="selected">HOME</div>
-                    <div>RSVP</div>
-                    <div class="nav-location" onclick="setActiveSection(1)">LOCATION</div>
-                    <div class="nav-schedule" onclick="setActiveSection(2)">SCHEDULE</div>
-                    <div class="nav-hotels" onclick="setActiveSection(3)">HOTELS</div>
-                </div>
-            </div>
-            </div>
-        </nav>
 
         <div style="min-height: 100vh;box-shadow:-2px -1px 20px 1px rgb(0 0 0 / 11%); position: relative;background-color: white; max-width:960px; margin: 0 auto;position: absolute;left: 0;right: 0;top: 0;">
+            <nav class="nav-hamburger">
+                <div class="navbar" style="height:0px">
+                    <div class="ncontainer nav-container">
+                        <input class="checkbox" type="checkbox" name="" id="" />
+                        <div class="hamburger-lines">
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </div>
+                    <div class="menu-items" style="background-color: white;">
+                        <div class="nav-home" onclick="setActiveSection(0)" class="selected">HOME</div>
+                        <div class="nav-rsvp" onclick="setActiveSection(1)">RSVP</div>
+                        <div class="nav-location" onclick="setActiveSection(2)">LOCATION</div>
+                        <div class="nav-schedule" onclick="setActiveSection(3)">SCHEDULE</div>
+                        <div class="nav-hotels" onclick="setActiveSection(4)">HOTELS</div>
+                    </div>
+                </div>
+                </div>
+            </nav>
+            
             <section>
                 <h2 style="font-family: 'Source Serif Pro', serif;" class="text-center glen-bea">Glen & Bea Cecilie</h2>
                 <p class="invite-text">Invite your to join them on thier wedding day</p>
@@ -55,10 +50,10 @@
 
             <section class="nav flex-center text-center" style="background-color: white; display: none;z-index: 9999;position: relative;">
                 <div class="nav-home selected" onclick="setActiveSection(0)">HOME</div>
-                <div>RSVP</div>
-                <div class="nav-location" onclick="setActiveSection(1)">LOCATION</div>
-                <div class="nav-schedule" onclick="setActiveSection(2)">SCHEDULE</div>
-                <div class="nav-hotels" onclick="setActiveSection(3)">HOTELS</div>
+                <div class="nav-rsvp" onclick="setActiveSection(1)">RSVP</div>
+                <div class="nav-location" onclick="setActiveSection(2)">LOCATION</div>
+                <div class="nav-schedule" onclick="setActiveSection(3)">SCHEDULE</div>
+                <div class="nav-hotels" onclick="setActiveSection(4)">HOTELS</div>
             </section>
 
             <section id="home" class="active-section" style="width: 100%; height: 600px; overflow:visible">
@@ -78,6 +73,16 @@
                     <div class="img-wreath" style="z-index: 1;">
                         <img src="assets/plants.jpg" class="fade-in-fast" />
                     </div>
+                </div>
+            </section>
+
+            <section id="rsvp" style="display:none;">
+                <div style="display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-items: center;" class="flex-center text-center">
+                    <p style="width: 300px;margin: 3em; padding-top:4em">Please click the button below to send us both an email to confirm whether or not you can attend.</p>
+                    <a class="rsvp" href="mailto:morrison.bruce.glen@gmail.com?cc=bceciliekarlsen@gmail.com&subject=Wedding%20RSVP&body=I%20can%20confirm%20that%20the%20following%20people%20can%2Fcannot%20make%20the%20wedding%3A%0D%0A1.%20First%0D%0A2.%20Second%0D%0A3.%20...%0D%0A%0D%0A%5BLet%20us%20know%20if%20you%20have%20any%20questions%20here%20and%20we%20are%20happy%20to%20answer!%5D">RSVP</a>
                 </div>
             </section>
 
