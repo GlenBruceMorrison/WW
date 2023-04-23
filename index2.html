@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Glen & Bea Wedding</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&family=Merienda:wght@300&family=Roboto&family=Satisfy&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="schedule.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="site">
+
+        <div style="min-height: 100vh;box-shadow:-2px -1px 20px 1px rgb(0 0 0 / 11%); position: relative;background-color: white; max-width:960px; margin: 0 auto;position: absolute;left: 0;right: 0;top: 0;">
+            <nav class="nav-hamburger">
+                <div class="navbar" style="height:0px">
+                    <div class="ncontainer nav-container">
+                        <input class="checkbox" type="checkbox" name="" id="" />
+                        <div class="hamburger-lines">
+                            <span class="line line1"></span>
+                            <span class="line line2"></span>
+                            <span class="line line3"></span>
+                        </div>
+                    <div class="menu-items" style="background-color: white;">
+                        <div class="nav-home" onclick="setActiveSection(0)" class="selected">HOME</div>
+                        <div class="nav-rsvp" onclick="setActiveSection(1)">RSVP</div>
+                        <div class="nav-location" onclick="setActiveSection(2)">LOCATION</div>
+                        <div class="nav-schedule" onclick="setActiveSection(3)">SCHEDULE</div>
+                        <div class="nav-hotels" onclick="setActiveSection(4)">HOTELS</div>
+                    </div>
+                </div>
+                </div>
+            </nav>
+            
+            <section>
+                <h2 style="font-family: 'Source Serif Pro', serif;" class="text-center glen-bea">Glen & Bea Cecilie</h2>
+                <p class="invite-text">Invite your to join them on thier wedding day</p>
+            </section>
+
+            <section class="nav flex-center text-center" style="background-color: white; display: none;z-index: 9999;position: relative;">
+                <div class="nav-home selected" onclick="setActiveSection(0)">HOME</div>
+                <div class="nav-rsvp" onclick="setActiveSection(1)">RSVP</div>
+                <div class="nav-location" onclick="setActiveSection(2)">LOCATION</div>
+                <div class="nav-schedule" onclick="setActiveSection(3)">SCHEDULE</div>
+                <div class="nav-hotels" onclick="setActiveSection(4)">HOTELS</div>
+            </section>
+
+            <section id="home" class="active-section" style="width: 100%; height: 600px; overflow:visible">
+                <div class="wreath-container">
+                    <div class="date-container" style="z-index: 3; width: 960px;">
+                        <div style="width: 200px; font-size: 2em; color:#909090" class="fade-in-slow border-top-bottom">
+                            SUNDAY
+                        </div>
+                        <div style="animation: moveIn 4s; width: 200px; font-size: 5em;">24</div>
+                        <div style="width: 200px; font-size: 2em; color:#909090" class="fade-in-slow border-top-bottom">
+                            SEPTEMBER
+                        </div>
+                    </div>
+                    <div class="img-roses" style="z-index: 2;">
+                        <img src="assets/1.png" class="fade-in-slow" />
+                    </div>
+                    <div class="img-wreath" style="z-index: 1;">
+                        <img src="assets/plants.jpg" class="fade-in-fast" />
+                    </div>
+                </div>
+            </section>
+
+            <section id="rsvp" style="display:none;">
+                <div style="display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-items: center;" class="flex-center text-center">
+                    <p style="width: 300px;margin: 3em; padding-top:4em">Please click the button below to send us both an email to confirm whether or not you can attend.</p>
+                    <a class="rsvp" href="mailto:morrison.bruce.glen@gmail.com?cc=bceciliekarlsen@gmail.com&subject=Wedding%20RSVP&body=I%20can%20confirm%20that%20the%20following%20people%20can%2Fcannot%20make%20the%20wedding%3A%0D%0A1.%20First%0D%0A2.%20Second%0D%0A3.%20...%0D%0A%0D%0A%5BLet%20us%20know%20if%20you%20have%20any%20questions%20here%20and%20we%20are%20happy%20to%20answer!%5D">RSVP</a>
+                </div>
+            </section>
+
+            <section id="location" style="display:none;">
+                <img width=100% src="assets/Melville Castle 3.jpeg"/>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5321.369108947562!2d-3.103741963898956!3d55.89111380094652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887becc84d0aec9%3A0xd875e77214e6794f!2sMelville%20Castle%20Hotel!5e0!3m2!1sen!2suk!4v1676816708958!5m2!1sen!2suk" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <section id="schedule" style="display:none;">
+                <div id="schedule-view"></div>
+            </section>
+
+            <section id="hotels" style="display:none">
+                <div id="hotel-view" style="margin-left: 3em;margin-right: 3em;"></div>
+            </section>
+        </div>
+    </div>
+
+    <script id="template-hotel-table" type="x-tmpl-mustache">
+        <div style="display:flex; flex-wrap:wrap; flex-direction:row; justify-content:space-between;">
+            {{#hotels}}
+            <div class="card" style="width: 200px">
+                <a target="_blank" href="{{link}}" style="color:#006E51;font-weight:bold;">{{name}}</a>
+                <p>{{pricePerNight}}</p>
+                <a target="_blank" href="{{directionLink}}">{{distance}} minutes</a>
+            </div>
+            {{/hotels}}
+        </div>
+    </script>
+
+    <script id="template-schedule" type="x-tmpl-mustache">
+        <h1 style="text-align: center; font-weight:100; font-size: 1.5em;">24th September 2023</h1>
+        <div class="timeline">
+            {{#scehdules}}
+            <div class="container {{side}}">
+                <div class="date">{{time}}</div>
+                <span class="material-icons icon">{{icon}}</span>
+                <div class="content">
+                    <h2>{{title}}</h2>
+                    <p>{{description}}</p>
+                </div>
+            </div>
+            {{/scehdules}}
+        </div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.1/mustache.min.js" integrity="sha512-3GRj7sme01zpWwRNPNy48Rda1bD9cq34lqYG5vb8ZXGc+wRqsoBJ3+AC25IYW5w5SrWlzHqIpNIxZt5QF9sXLg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
