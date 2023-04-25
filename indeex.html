@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Glen & Bea Wedding</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <style>
+        :root {}
+
+        .hero-bck {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .hero-text {
+            position: absolute;
+            display: flex;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            color: #ddbe88;
+            text-align: center;
+            padding: 0.3em;
+            height: 100%;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            pointer-events: none;
+            font-size: calc(1em + 10vw);
+            animation: 2s slideInFromLeft;
+        }
+
+        #nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #nav a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                filter: blur(3px);
+                opacity: 0;
+                padding-top: 2px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {}
+
+        @media only screen and (min-width: 600px) {}
+
+        @media only screen and (min-width: 768px) {}
+
+        @media only screen and (min-width: 992px) {}
+
+        @media only screen and (min-width: 1200px) {}
+
+        .full {
+            width: 100%;
+            height: 100%;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div>
+        <div class="center" style="width: 100%; height: 500px;position: relative;">
+            <img style="object-fit: cover;" src="/assets/2.webp" />
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='container'>
+        <div class='d-flex flex-column justify-content-center align-items-center' style="padding:7em; height:100vh;">
+            <h1 style="color: rgb(25, 25, 25);">24 . 09 . 2023</h1>
+            <h1 style="font-size: 8em;">Glen & Bea Cecilie</h1>
+            <div id="nav" class="d-flex flex-row align-items-center" style="gap:100px;">
+                <a href="#" onclick="smoothScroll(document.getElementById('second'))">LOCATION</a>
+                <a href="#">RSVP</a>
+                <a href="#">SCHEDULE</a>
+                <a href="#">INFO</a>
+                <a href="#">Registry</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="second">
+        <div style="width: 100%; position: relative">
+            <div class="hero-bck"></div>
+            <div class="hero-text">
+                <p>MELVILLE CASTLE</p>
+                <p style="font-size: 0.3em"></p>
+            </div>
+            <div style="width: 100%; height: 70vh;">
+                <img style="height: 100%;
+                            width: 100%;
+                            object-fit: cover;" src="/assets/castle.jpeg" />
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div style="width: 100%; position: relative; height: 30vh">
+            <div class="hero-bck"></div>
+            <div class="hero-text">
+                <p style="font-size: 0.3em; color: white">Edinburgh, EH18 1AP</p>
+            </div>
+            <iframe id="maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4474.720725771167!2d-3.108454942703257!3d55.89110931041198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887becc84d0aec9%3A0xd875e77214e6794f!2sMelville%20Castle%20Hotel!5e0!3m2!1sen!2suk!4v1682349483083!5m2!1sen!2suk"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+
+
+
+    <div style="min-height: 200px;padding: 2em; background-color: #636678; color: white">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-12 col-lg-6">
+                    <h1 style="color: #e7bd99;padding-bottom: 23px;">ACCOMODATION</h1>
+                    <p>There are plenty of hotels close to the castle and also many hotels in Edinburgh city center which are all within 20-30 mins of the castle.</p>
+                    <a target=”_blank”
+                        href="https://www.google.com/travel/search?q=near%20EH18%201AP&qs=CAEgACgAOA1IAA&ved=0CAAQ5JsGahgKEwjo07-N-8L-AhUAAAAAHQAAAAAQhgE&ts=CAESCgoCCAMKAggDEAAaUwo1EjEyJTB4NDg4N2JlZDNmZGQ0ZTZmNzoweGFjMzhhOGY3NzQ1ZjBhZGI6CEVoMTggMWFwGgASGhIUCgcI5w8QCRgXEgcI5w8QCRgZGAIyAggBKgkKBToDR0JQGgA&ap=KigKEgmfwDFSX-1LQBFM9zqpGv4JwBISCa7v2CJ1_EtAEUz3Oql04gfAMAE">Hotels
+                        Neardby The Castle</a>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h1 style="color: #e7bd99;padding-bottom: 23px;">DIRECTIONS</h1>
+
+                    <div>
+                        <a target=”_blank”
+                            href="https://www.google.com/maps/dir/Edinburgh+Airport,+Edinburgh+EH12+9DN/Lasswade+EH18+1AP/@55.9202361,-3.5554222,10z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x4887c50e93e3017d:0x19530a2592b1d59b!2m2!1d-3.3614532!2d55.950785!1m5!1m1!1s0x4887bed3fdd4e6f7:0xac38a8f7745f0adb!2m2!1d-3.0918525!2d55.8944467!3e0">Taxi From Airport
+                            - 20 mins</a>
+                    </div>
+                    <div>
+                        <a target=”_blank”
+                            href="https://www.google.com/maps/dir/Edinburgh+Airport,+Edinburgh+EH12+9DN/Lasswade+EH18+1AP/@55.9202361,-3.5554222,10z/data=!4m14!4m13!1m5!1m1!1s0x4887c50e93e3017d:0x19530a2592b1d59b!2m2!1d-3.3614532!2d55.950785!1m5!1m1!1s0x4887bed3fdd4e6f7:0xac38a8f7745f0adb!2m2!1d-3.0918525!2d55.8944467!3e3">Public
+                            transport From - 1 hour</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    window.smoothScroll = function (target) {
+        var scrollContainer = target;
+        do { //find scroll container
+            scrollContainer = scrollContainer.parentNode;
+            if (!scrollContainer) return;
+            scrollContainer.scrollTop += 1;
+        } while (scrollContainer.scrollTop == 0);
+
+        var targetY = 0;
+        do { //find the top of target relatively to the container
+            if (target == scrollContainer) break;
+            targetY += target.offsetTop;
+        } while (target = target.offsetParent);
+
+        scroll = function (c, a, b, i) {
+            i++; if (i > 30) return;
+            c.scrollTop = a + (b - a) / 30 * i;
+            setTimeout(function () { scroll(c, a, b, i); }, 10);
+        }
+        // start scrolling
+        scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+    }
+</script>
+
+</html>
