@@ -20,7 +20,7 @@
         }
 
         #main {
-            height: 100vh;
+            height: calc(100vh - 56px);
             align-items: center;
             justify-content: center;
             flex-wrap: nowrap;
@@ -53,7 +53,8 @@
             padding: 0;
         }
 
-        .nav-pills .nav-link.active,.nav-pills .show > .nav-link {
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
             background-color: rgba(255, 255, 255, 0) !important;
             color: rgb(24, 151, 87);
             border-bottom: 3px rgb(24, 151, 87) solid;
@@ -61,11 +62,24 @@
             width: 100px;
             text-align: center;
         }
-        
-        .nav-pills .nav-link,.nav-pills .show>.nav-link {
+
+        .nav-pills .nav-link,
+        .nav-pills .show>.nav-link {
             color: grey;
             width: 100px;
             text-align: center;
+        }
+
+        .navbar-nav .nav-link.active,
+        .navbar-nav .nav-link.show {
+            color: var(--bs-navbar-active-color);
+            border-bottom: 1px solid green;
+        }
+        
+        .btn-check:checked+.btn {
+            color: #fff;
+            background-color: black;
+            border-color: black;
         }
 
         @media only screen and (min-width: 969px) {
@@ -119,95 +133,391 @@
             background-color: rgb(235, 235, 235);
         }
     </style>
+
+    <style>
+        /* The actual timeline (the vertical ruler) */
+        .main-timeline-2 {
+            position: relative;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .main-timeline-2::after {
+            content: "";
+            position: absolute;
+            width: 3px;
+            background-color: #26c6da;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        /* Container around content */
+        .timeline-2 {
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        /* The circles on the timeline */
+        .timeline-2::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -11px;
+            background-color: #26c6da;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Place the container to the left */
+        .left-2 {
+            padding: 0px 40px 20px 0px;
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .right-2 {
+            padding: 0px 0px 20px 40px;
+            left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .left-2::before {
+            content: " ";
+            position: absolute;
+            top: 18px;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right-2::before {
+            content: " ";
+            position: absolute;
+            top: 18px;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right-2::after {
+            left: -14px;
+        }
+
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+
+            /* Place the timelime to the left */
+            .main-timeline-2::after {
+                left: 31px;
+            }
+
+            /* Full-width containers */
+            .timeline-2 {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            /* Make sure that all arrows are pointing leftwards */
+            .timeline-2::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            /* Make sure all circles are at the same spot */
+            .left-2::after,
+            .right-2::after {
+                left: 18px;
+            }
+
+            .left-2::before {
+                right: auto;
+            }
+
+            /* Make all right containers behave like the left ones */
+            .right-2 {
+                left: 0%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <nav id="navbar" class="navbar navbar-light bg-light px-3 sticky-top" style="justify-content: center">
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a class="nav-link" href="#one">Main</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#two">Location</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#three">RSVP</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg bg-light  sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a id="nav-main" class="nav-link">G & B</a>
+                    <a id="nav-location" class="nav-link">LOCATION</a>
+                    <a id="nav-rsvp" class="nav-link">RSVP</a>
+                    <a id="nav-schedule" class="nav-link">SCHEDULE</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-        <div id="one" class="container">
-            <div id="main" class="row p-5">
-                <div class="col-12 col-lg-6" style="text-align: center;">
-                    <h1>Glen & Bea</h1>
-                    <h2>24.09.23</h2>
-                    <img href="https://flagicons.lipis.dev/flags/4x3/gb-sct.svg" />
-                </div>
-                <div class="col-12 col-lg-6">
-                    <img src="assets/2.webp" alt="flowers" style="width: 100%; object-fit: cover;">
-                </div>
+    <article id="main" class="container">
+        <div id="main" class="row p-5">
+            <div class="col-12 col-lg-6" style="text-align: center;">
+                <h1>Glen & Bea</h1>
+                <h2>24.09.23</h2>
+                <img href="https://flagicons.lipis.dev/flags/4x3/gb-sct.svg" />
+            </div>
+            <div class="col-12 col-lg-6">
+                <img src="assets/2.webp" alt="flowers" style="width: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </article>
+
+    <article id="location" id="second">
+        <div style="width: 100%; position: relative">
+            <div class="hero-bck"></div>
+            <div class="hero-text">
+                <p>MELVILLE CASTLE</p>
+                <p style="font-size: 0.3em"></p>
+            </div>
+            <div style="width: 100%; height: 70vh;">
+                <img style="height: 100%;width: 100%; object-fit: cover;" src="/assets/castle.jpeg" />
             </div>
         </div>
 
-        <div id="two" id="second">
-            <div style="width: 100%; position: relative">
-                <div class="hero-bck"></div>
-                <div class="hero-text">
-                    <p>MELVILLE CASTLE</p>
-                    <p style="font-size: 0.3em"></p>
-                </div>
-                <div style="width: 100%; height: 70vh;">
-                    <img style="height: 100%;width: 100%; object-fit: cover;" src="/assets/castle.jpeg" />
+        <div style="width: 100%; position: relative; height: 30vh">
+            <div class="hero-bck"></div>
+            <div class="hero-text">
+                <p style="font-size: 0.3em; color: white">Edinburgh, EH18 1AP</p>
+            </div>
+            <iframe id="maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4474.720725771167!2d-3.108454942703257!3d55.89110931041198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887becc84d0aec9%3A0xd875e77214e6794f!2sMelville%20Castle%20Hotel!5e0!3m2!1sen!2suk!4v1682349483083!5m2!1sen!2suk"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </article>
+
+    <article id="rsvp" style="padding-top: 50px;">
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeVTXPcoFxH1jqDZ4UU5uKRApXbVzpJcXsM3RtuMunE7O-uNQ/viewform?embedded=true"
+            width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </article>
+
+    <article id="schedule">
+        <section style="background-color: #F0F2F5;">
+
+            <div class="d-flex justify-content-center p-5">
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnDay" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnDay">Day Guest</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnEvening" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnEvening">Evening Guest</label>
                 </div>
             </div>
 
-            <div style="width: 100%; position: relative; height: 30vh">
-                <div class="hero-bck"></div>
-                <div class="hero-text">
-                    <p style="font-size: 0.3em; color: white">Edinburgh, EH18 1AP</p>
+            <div class="container py-5">
+                <div class="main-timeline-2">
+                    <div class="timeline-2 left-2 day">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1530453029958-05ad3266af54?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1455&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">13:30</h4>
+                                <p class="text-muted mb-4">Guests Arrival<i class="far fa-clock" aria-hidden="true"></i>
+                                </p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-2 right-2 day">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">14:00</h4>
+                                <p class="text-muted mb-4">Ceremony<i class="far fa-clock" aria-hidden="true"></i></p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-2 left-2 day">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1580657274234-7339717f4541?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">14:40</h4>
+                                <p class="text-muted mb-4">Drinks Reception & Canapes<i class="far fa-clock"
+                                        aria-hidden="true"></i></p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-2 right-2 day">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1634668339588-091b29e87dae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">15:45</h4>
+                                <p class="text-muted mb-4">Call To Dinner<i class="far fa-clock" aria-hidden="true"></i>
+                                </p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-2 left-2 day">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">16:00</h4>
+                                <p class="text-muted mb-4">Speeches<i class="far fa-clock" aria-hidden="true"></i></p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-2 right-2 day">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1620735692151-26a7e0748429?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">16:30</h4>
+                                <p class="text-muted mb-4">Wedding Breakfast<i class="far fa-clock"
+                                        aria-hidden="true"></i></p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-2 left-2 day">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1500217052183-bc01eee1a74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">18:30</h4>
+                                <p class="text-muted mb-4">Comfort Break<i class="far fa-clock" aria-hidden="true"></i>
+                                </p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-2 right-2">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1464047736614-af63643285bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">19:00</h4>
+                                <p class="text-muted mb-4">Evening Guests Arrival<i class="far fa-clock"
+                                        aria-hidden="true"></i></p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-2 left-2">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1604702433171-33756f3f3825?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1405&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">19:30</h4>
+                                <p class="text-muted mb-4">Cake Cutting & First Dance<i class="far fa-clock"
+                                        aria-hidden="true"></i></p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-2 right-2">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1566913485242-694e995731b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">19:45</h4>
+                                <p class="text-muted mb-4">Scottish Ceilidh Dancing<i class="far fa-clock"
+                                        aria-hidden="true"></i></p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-2 left-2">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1527751171053-6ac5ec50000b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">21:30</h4>
+                                <p class="text-muted mb-4">Evening Buffet<i class="far fa-clock" aria-hidden="true"></i>
+                                </p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-2 right-2">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+                                class="card-img-top">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">00:00</h4>
+                                <p class="text-muted mb-4">End Of Wedding<i class="far fa-clock" aria-hidden="true"></i>
+                                </p>
+                                <p class="mb-0">...</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <iframe id="maps"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4474.720725771167!2d-3.108454942703257!3d55.89110931041198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887becc84d0aec9%3A0xd875e77214e6794f!2sMelville%20Castle%20Hotel!5e0!3m2!1sen!2suk!4v1682349483083!5m2!1sen!2suk"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-        </div>
-
-        <div id="three" style="padding-top: 50px;">
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSeVTXPcoFxH1jqDZ4UU5uKRApXbVzpJcXsM3RtuMunE7O-uNQ/viewform?embedded=true"
-                width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
-    </div>
+        </section>
+    </article>
 
     <script>
-        function addName() {
-            var container = document.getElementById("names-container");
-            var input = document.createElement("input");
-            input.type = "text";
-            input.name = "names[]";
-            input.className = "form-control";
-            input.placeholder = "Enter Name";
-            input.style.marginTop = '1em';
-            container.appendChild(input);
+        const navs = document.querySelectorAll('.nav-link');
+        const pages = document.querySelectorAll('article');
+
+        navs.forEach((nav) => {
+            nav.addEventListener('click', (e) => {
+                showPage(e.target.id.replace('nav-', ''));
+            });
+        });
+
+        const showPage = (id) => {
+            pages.forEach((page) => {
+                page.style.display = 'none';
+            });
+
+            navs.forEach((nav) => {
+                nav.classList.remove('active');
+            });
+
+            document.getElementById(`nav-${id}`).classList.add('active');
+            document.getElementById(id).style.display = 'block';
         }
 
-        function clearNames() {
-            var container = document.getElementById("names-container");
-            container.innerHTML = '<div class="form-group"><label for="names">Names</label><input type="text" class="form-control" name="names[]" placeholder="Enter Name"></div>';
-        }
+        showPage('main');
 
-        function sendEmail() {
-            var names = document.getElementsByName("names[]");
-            var nameList = "";
-            for (var i = 0; i < names.length; i++) {
-                nameList += names[i].value + ", ";
+
+        const eveningBtn = document.getElementById("btnEvening");
+        const dayBtn = document.getElementById("btnDay");
+        const dayElements = document.getElementsByClassName("day");
+
+        eveningBtn.addEventListener("click", () => {
+            for (let i = 0; i < dayElements.length; i++) {
+                dayElements[i].style.display = "none";
             }
-            var attendance = document.getElementById("attendYes").checked;
-            var email = "mailto:example@example.com?subject=Attendance&body=Names: " + encodeURIComponent(nameList) + "%0D%0AAttendance: " + attendance;
-            window.location.href = email;
-        }
+        });
+
+        dayBtn.addEventListener("click", () => {
+            for (let i = 0; i < dayElements.length; i++) {
+                dayElements[i].style.display = "block";
+            }
+        });
     </script>
 </body>
 </html>
