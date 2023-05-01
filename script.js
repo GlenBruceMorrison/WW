@@ -138,7 +138,7 @@ for (var i = 0; i < data.length; i++) {
     container.innerHTML += html;
 }
 
-const ONE_DAY = 1000 * 60 * 60 * 24;
+const dayOne = 1000 * 60 * 60 * 24;
 const differenceMs = Math.abs(new Date() - new Date(2023, 9, 24));
-const days = Math.round(differenceMs / ONE_DAY);
+const days = Math.round(differenceMs / dayOne);
 document.querySelector('#days').innerHTML = `${days} days to go!`;
