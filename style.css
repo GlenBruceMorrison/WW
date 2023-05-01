@@ -149,6 +149,7 @@ h1 {
     top: 15px;
     border-radius: 50%;
     z-index: 1;
+    animation: 1s grow;
 }
 
 .left-2 {
@@ -156,21 +157,34 @@ h1 {
     left: 0;
 }
 
+.left-2 .card {
+    animation: 1s slideFromLeft;
+}
+
+@keyframes grow {
+    0% {transform: scale(0);}
+    100% {transform: scale(100%);}
+}
+
+@keyframes slideFromLeft {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+}
+
 .right-2 {
     padding: 0px 0px 20px 40px;
     left: 50%;
 }
 
-.left-2::before {
-    content: " ";
-    position: absolute;
-    top: 18px;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
+.right-2 .card {
+    animation: 1s slideFromRight;
 }
+
+@keyframes slideFromRight {
+    from {transform: translateX(100%);}
+    to  {transform: translateX(0);}
+}
+
 
 .right-2::before {
     content: " ";
@@ -188,7 +202,6 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-
     .main-timeline-2::after {
         left: 31px;
     }
@@ -199,21 +212,12 @@ h1 {
         padding-right: 25px;
     }
 
-    .timeline-2::before {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
 
     .left-2::after,
     .right-2::after {
         left: 18px;
     }
 
-    .left-2::before {
-        right: auto;
-    }
 
     .right-2 {
         left: 0%;

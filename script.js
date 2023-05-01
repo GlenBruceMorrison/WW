@@ -30,14 +30,21 @@ const showPage = (id, first = false) => {
 
 showPage('main', true);
 
-
 const eveningBtn = document.getElementById("btnEvening");
 const dayBtn = document.getElementById("btnDay");
+
 const dayElements = document.getElementsByClassName("day");
+const eveningElements = document.querySelectorAll(".evening .card");
 
 eveningBtn.addEventListener("click", () => {
     for (let i = 0; i < dayElements.length; i++) {
         dayElements[i].style.display = "none";
+    }
+    for (let i = 0; i < eveningElements.length; i++) {
+        console.log(eveningElements[i])
+        eveningElements[i].style.animation = 'none';
+        eveningElements[i].offsetHeight; /* trigger reflow */
+        eveningElements[i].style.animation = null; 
     }
 });
 
