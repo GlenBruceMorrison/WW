@@ -10,7 +10,7 @@ navs.forEach((nav) => {
     });
 });
 
-const showPage = (id, first=false) => {
+const showPage = (id, first = false) => {
     pages.forEach((page) => {
         page.style.display = 'none';
     });
