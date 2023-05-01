@@ -131,14 +131,7 @@ for (var i = 0; i < data.length; i++) {
     container.innerHTML += html;
 }
 
-const currentDate = new Date();
-const futureDate = new Date(2023, 9, 23);
-const diffInMs = futureDate - currentDate;
-const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
-
-const months = Math.floor(diffInDays / 30);
-const weeks = Math.floor((diffInDays % 30) / 7);
-const days = diffInDays % 7;
-
-const formattedString = `${months} months ${weeks} weeks and ${days} days`;
-document.querySelector('#days').innerHTML = `${formattedString} to go!`;
+const ONE_DAY = 1000 * 60 * 60 * 24;
+const differenceMs = Math.abs(new Date() - new Date(2023, 9, 24));
+const days = Math.round(differenceMs / ONE_DAY);
+document.querySelector('#days').innerHTML = `${days} days to go!`;
