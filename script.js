@@ -2,7 +2,6 @@
 const navs = document.querySelectorAll('.nav-link');
 const pages = document.querySelectorAll('article');
 const menuToggle = document.getElementById('navbar')
-const navCollapse = new bootstrap.Collapse(menuToggle);
 const body = document.querySelector('body')
 
 navs.forEach((nav) => {
@@ -11,7 +10,7 @@ navs.forEach((nav) => {
     });
 });
 
-const showPage = (id) => {
+const showPage = (id, first=false) => {
     pages.forEach((page) => {
         page.style.display = 'none';
     });
@@ -23,14 +22,13 @@ const showPage = (id) => {
     document.getElementById(`nav-${id}`).classList.add('active');
     document.getElementById(id).style.display = 'block';
 
-    console.log(body.clientWidth);
-
-    if (body.clientWidth < 992) {
+    if (body.clientWidth < 992 && !first) {
+        const navCollapse = new bootstrap.Collapse(menuToggle);
         navCollapse.toggle();
     }
 }
 
-showPage('edinburgh');
+showPage('main', true);
 
 
 const eveningBtn = document.getElementById("btnEvening");
