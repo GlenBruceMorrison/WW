@@ -2,7 +2,6 @@
 const navs = document.querySelectorAll('.nav-link');
 const pages = document.querySelectorAll('article');
 const menuToggle = document.getElementById('navbar')
-const navCollapse = new bootstrap.Collapse(menuToggle);
 const body = document.querySelector('body')
 
 navs.forEach((nav) => {
@@ -23,7 +22,8 @@ const showPage = (id, first=false) => {
     document.getElementById(`nav-${id}`).classList.add('active');
     document.getElementById(id).style.display = 'block';
 
-    if (body.clientWidth < 992 && first) {
+    if (body.clientWidth < 992 && !first) {
+        const navCollapse = new bootstrap.Collapse(menuToggle);
         navCollapse.toggle();
     }
 }
