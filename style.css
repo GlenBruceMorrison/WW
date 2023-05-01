@@ -45,15 +45,37 @@ h1 {
     animation: 2s ease-out 0s 1 slideInFromLeft;
 }
 
+.nav-link {
+    width: 10em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+
+}
+
+.navbar-nav {
+    align-content: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
     color: var(--bs-navbar-active-color);
     border-bottom: 1px solid var(--color-main);
 }
 
-@media only screen and (min-width: 969px) {
+@media only screen and (min-width: 992px) {
     #main {
         flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #main h1 {
+        font-size: 3em;
     }
 }
 
@@ -202,4 +224,14 @@ h1 {
 
 #guest-toggle .btn-outline-primary {
     border-color: var(--color-secondary)! important;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+.btn-outline-primary {
+    border-color: var(--color-main);
+    color: var(--color-main);
 }
