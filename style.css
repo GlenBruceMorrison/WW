@@ -2,7 +2,7 @@
 
 :root {
     --color-main: green;
-    --color-secondary: green;
+    --color-secondary: rgb(119, 152, 119);
     --color-hero-text: #ddbe88;
     --font-fancy: 'Dancing Script', cursive;
 }
