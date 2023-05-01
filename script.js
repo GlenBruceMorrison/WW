@@ -23,14 +23,12 @@ const showPage = (id) => {
     document.getElementById(`nav-${id}`).classList.add('active');
     document.getElementById(id).style.display = 'block';
 
-    console.log(body.clientWidth);
-
     if (body.clientWidth < 992) {
         navCollapse.toggle();
     }
 }
 
-showPage('edinburgh');
+showPage('main');
 
 
 const eveningBtn = document.getElementById("btnEvening");
