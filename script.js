@@ -11,7 +11,7 @@ navs.forEach((nav) => {
     });
 });
 
-const showPage = (id) => {
+const showPage = (id, first=false) => {
     pages.forEach((page) => {
         page.style.display = 'none';
     });
@@ -23,12 +23,12 @@ const showPage = (id) => {
     document.getElementById(`nav-${id}`).classList.add('active');
     document.getElementById(id).style.display = 'block';
 
-    if (body.clientWidth < 992) {
+    if (body.clientWidth < 992 && first) {
         navCollapse.toggle();
     }
 }
 
-showPage('main');
+showPage('main', true);
 
 
 const eveningBtn = document.getElementById("btnEvening");
