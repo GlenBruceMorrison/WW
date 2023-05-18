@@ -72,7 +72,7 @@ var data = [
         free: true
     },
     {
-        imageSrc: "assets/gallery.avif",
+        imageSrc: "assets/gallery.jpg",
         title: "Scottish National Gallery",
         description: "The Scottish National Gallery is home to the national collection of fine art, from the early Renaissance to the end of the nineteenth century.",
         link: "https://www.nationalgalleries.org/visit/scottish-national-gallery",
@@ -80,7 +80,7 @@ var data = [
         free: true
     },
     {
-        imageSrc: "assets/seat.avif",
+        imageSrc: "assets/seat.jpg",
         title: "Arthur's Seat",
         description: "Arthur's Seat is one of four hill forts, dating from around 2,000 years ago. Situated within Holyrood Park, as well as it's rich cultural heritage, the park offers walks, solace, wildlife, volcanic geology and unparalleled vistas of the city from its many vantage points.",
         link: "https://www.tripadvisor.co.uk/Attraction_Review-g186525-d195211-Reviews-Arthur_s_Seat-Edinburgh_Scotland.html",
@@ -88,7 +88,7 @@ var data = [
         free: true
     },
     {
-        imageSrc: "assets/zoo.avif",
+        imageSrc: "assets/zoo.jpg",
         title: "Edinburgh Zoo",
         description: "Edinburgh Zoo is owned by The Royal Zoological Society of Scotland (RZSS). The Society was founded in March 1909, and the Zoo opened in July 1913. Set in 82 acres of sloping parkland, the Zoo is situated three miles to the west of Edinburgh city centre.",
         link: "https://www.edinburghzoo.org.uk/",
